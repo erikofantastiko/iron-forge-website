@@ -1,0 +1,283 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="You're In! - Iron Forge"
+    description="You're on the Iron Forge waitlist! Get ready for the workout tracking app built for serious lifters. We'll notify you when we launch on iOS."
+    noIndex={true}
+>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <picture>
+                <source srcset="/Logo.webp" type="image/webp">
+                <img src="/Logo.png" alt="Iron Forge Logo" width="44" height="44">
+            </picture>
+            <span>IRON FORGE</span>
+        </div>
+
+        <!-- Checkmark -->
+        <div class="checkmark">
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+
+        <!-- Hero -->
+        <div class="hero">
+            <h1>YOU'RE <span class="red">IN.</span></h1>
+            <p>
+                Welcome to the Iron Forge waitlist. You'll be the first to know when we launch on iOS.
+            </p>
+        </div>
+
+        <!-- What You'll Get -->
+        <div class="next-steps">
+            <h2>WHAT YOU'LL GET</h2>
+            <ul>
+                <li><strong>Native drop set & superset tracking</strong> — Log complex techniques properly, finally</li>
+                <li><strong>Progressive overload visualization</strong> — Watch your strength gains unfold over time</li>
+                <li><strong>Apple Health integration</strong> — Smart recovery metrics from your data</li>
+                <li><strong>Auto-calculated training volume</strong> — Stop doing math, focus on lifting</li>
+            </ul>
+        </div>
+
+        <!-- What's Next -->
+        <div class="next-steps whats-next">
+            <h2>WHAT'S NEXT</h2>
+            <ul>
+                <li>Keep an eye on your inbox for launch updates</li>
+                <li>Follow us on Instagram for behind-the-scenes content</li>
+                <li>We're building this for lifters like you — your feedback matters</li>
+            </ul>
+        </div>
+
+        <!-- Social CTAs -->
+        <div class="social-ctas">
+            <a href="https://www.instagram.com/ironforge.app/" target="_blank" rel="noopener" class="instagram-cta">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                Follow @ironforge.app
+            </a>
+
+            <button class="share-button" onclick="shareOnTwitter()" aria-label="Share on Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                Share on Twitter
+            </button>
+        </div>
+
+        <script is:inline>
+            function shareOnTwitter() {
+                const text = "Just joined the Iron Forge waitlist - the workout app built for serious lifters!";
+                const url = "https://ironforge.app";
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'width=550,height=420');
+            }
+        </script>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="/">← Back to homepage</a>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 60px 24px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Logo */
+    .logo {
+        justify-content: center;
+        margin-bottom: 60px;
+        opacity: 0;
+        animation: fadeIn 0.6s ease forwards;
+    }
+
+    /* Checkmark */
+    .checkmark {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 40px;
+        background: var(--red);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        animation: scaleIn 0.5s ease forwards 0.2s;
+    }
+
+    .checkmark svg {
+        width: 40px;
+        height: 40px;
+        stroke: #fff;
+        stroke-width: 3;
+        fill: none;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+        margin-bottom: 24px;
+        opacity: 0;
+        animation: slideUp 0.8s ease forwards 0.4s;
+    }
+
+    .hero h1 .red {
+        color: var(--red);
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        color: var(--gray);
+        line-height: 1.6;
+        max-width: 480px;
+        margin: 0 auto 40px;
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards 0.6s;
+    }
+
+    /* What's Next */
+    .next-steps {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 32px;
+        margin-bottom: 0;
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards 0.8s;
+    }
+
+    .next-steps.whats-next {
+        margin-top: 20px;
+    }
+
+    .next-steps h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 20px;
+        color: var(--red);
+    }
+
+    .next-steps ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .next-steps li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+        color: var(--gray);
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .next-steps li:last-child {
+        margin-bottom: 0;
+    }
+
+    .next-steps li::before {
+        content: '→';
+        color: var(--red);
+        font-weight: 500;
+        flex-shrink: 0;
+    }
+
+    .next-steps li strong {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    /* Social CTAs */
+    .social-ctas {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 40px;
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards 1s;
+    }
+
+    .instagram-cta,
+    .share-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+
+    .instagram-cta:hover,
+    .share-button:hover {
+        border-color: var(--red);
+        background: rgba(230, 57, 70, 0.1);
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+
+    .instagram-cta svg,
+    .share-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        margin-top: auto;
+        padding-top: 60px;
+        font-size: 0.85rem;
+        color: var(--gray);
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards 1.2s;
+    }
+
+    .footer a {
+        color: var(--red);
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+        .container {
+            padding: 40px 20px;
+        }
+
+        .next-steps {
+            padding: 24px;
+        }
+    }
+</style>
