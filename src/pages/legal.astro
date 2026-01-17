@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Legal Notice - Iron Forge"
+    description="Legal Notice and Impressum for Iron Forge - the workout tracking app built for serious lifters."
+    noIndex={true}
+>
+    <style>
+        /* Page container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 24px;
+            }
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+            text-decoration: none;
+            color: #fff;
+            width: fit-content;
+        }
+
+        .logo img {
+            width: 32px;
+            height: auto;
+        }
+
+        .logo span {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+            color: #fff;
+        }
+
+        h2 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+            color: var(--light-gray);
+        }
+
+        p {
+            color: var(--gray);
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+
+        ul {
+            color: var(--gray);
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer a {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .footer a:hover {
+            color: var(--red);
+        }
+    </style>
+
+    <div class="container">
+        <a href="/" class="logo">
+            <img src="/Logo.png" alt="Iron Forge Logo" />
+            <span>IRON FORGE</span>
+        </a>
+
+        <h1>Legal Notice</h1>
+        <p class="last-updated">Last updated: January 17, 2026</p>
+
+        <h2>Information according to § 5 ECG</h2>
+        <p>
+            <strong>Iron Forge</strong><br />
+            Erik Fleischhacker<br />
+            App and Software Development
+        </p>
+
+        <h2>Address</h2>
+        <p>
+            Groisbacher Strasse 37a/2<br />
+            2534 Alland<br />
+            Austria
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            Email: <a href="mailto:ironforge.labs@gmail.com">ironforge.labs@gmail.com</a>
+        </p>
+
+        <h2>EU Dispute Resolution</h2>
+        <p>
+            The European Commission provides a platform for online dispute resolution (OS):
+            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>
+        </p>
+        <p>
+            We are not willing or obliged to participate in dispute resolution proceedings
+            before a consumer arbitration board.
+        </p>
+
+        <h2>Analytics</h2>
+        <p>
+            <strong>Analytics Tool:</strong> Cloudflare Web Analytics
+        </p>
+        <p>
+            We use Cloudflare Web Analytics for privacy-focused website analytics.
+            No cookies are set and no personally identifiable information is collected.
+        </p>
+        <p>
+            For more details, see our <a href="/privacy">Privacy Policy</a>.
+        </p>
+
+        <div class="footer">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+</Layout>
