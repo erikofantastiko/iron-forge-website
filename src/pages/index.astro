@@ -21,12 +21,20 @@ import Layout from "../layouts/Layout.astro";
             "name": "Iron Forge",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "iOS",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/PreOrder"
-            },
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "7.99",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/PreOrder"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "69.99",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/PreOrder"
+                }
+            ],
             "description": "A workout tracking app built for serious lifters. Track drop sets, supersets, myo-reps, and progressive overload with precision.",
             "url": "https://ironforge.app",
             "logo": "https://ironforge.app/Logo.png",
@@ -66,29 +74,43 @@ import Layout from "../layouts/Layout.astro";
             <div class="feature">
                 <span class="feature-icon">✓</span>
                 <div class="feature-text">
-                    <strong>Native drop set & superset tracking</strong>
-                    <span>Log complex training techniques properly</span>
+                    <strong>7 advanced set types</strong>
+                    <span>Drop sets, supersets, myo-reps, rest-pause, cluster sets, giant sets, AMRAP — all tracked properly</span>
                 </div>
             </div>
             <div class="feature">
                 <span class="feature-icon">✓</span>
                 <div class="feature-text">
-                    <strong>Progressive overload visualization</strong>
-                    <span>Track your strength gains over time</span>
+                    <strong>Progressive overload tracking</strong>
+                    <span>Volume, 1RM estimates and strength trends across every exercise</span>
                 </div>
             </div>
             <div class="feature">
                 <span class="feature-icon">✓</span>
                 <div class="feature-text">
                     <strong>Auto-calculated training volume</strong>
-                    <span>Stop doing math, focus on lifting</span>
+                    <span>Per muscle group, per session, per week — no manual maths</span>
                 </div>
             </div>
             <div class="feature">
                 <span class="feature-icon">✓</span>
                 <div class="feature-text">
-                    <strong>Apple Health recovery integration</strong>
-                    <span>Smart recovery metrics from your data</span>
+                    <strong>HRV-based recovery scoring</strong>
+                    <span>Recovery score from Apple Health data — HRV, sleep, resting heart rate</span>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <div class="feature-text">
+                    <strong>Prefill from last session</strong>
+                    <span>Weights and reps carry over automatically — start where you left off</span>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <div class="feature-text">
+                    <strong>1,400+ exercises built in</strong>
+                    <span>Full library with custom exercise support and per-exercise configuration</span>
                 </div>
             </div>
         </div>
@@ -140,8 +162,8 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </form>
         <p class="form-note">
-            <strong>Be among the first to experience Iron Forge.</strong><br>
-            Launching soon on iOS. No spam, just launch updates.
+            <strong>Launching on iOS in Austria.</strong><br>
+            Join the waitlist for early access. No spam, just launch updates.
         </p>
 
         <!-- Footer -->
@@ -228,8 +250,8 @@ import Layout from "../layouts/Layout.astro";
     /* Features */
     .features {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
         margin-bottom: 60px;
         opacity: 0;
         animation: fadeIn 0.8s ease forwards 0.8s;
