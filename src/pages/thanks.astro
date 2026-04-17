@@ -140,11 +140,12 @@ import Layout from "../layouts/Layout.astro";
 
     .hero h1 .red {
         color: var(--red);
+        text-shadow: 0 0 40px var(--red-glow);
     }
 
     .hero p {
         font-size: 1.1rem;
-        color: var(--gray);
+        color: var(--text-secondary);
         line-height: 1.6;
         max-width: 480px;
         margin: 0 auto 40px;
@@ -155,11 +156,12 @@ import Layout from "../layouts/Layout.astro";
     /* What's Next */
     .next-steps {
         text-align: left;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
+        background: var(--surface-1);
+        border: 1px solid var(--surface-border);
+        border-radius: var(--radius-md);
         padding: 32px;
         margin-bottom: 0;
+        box-shadow: var(--shadow-sm);
         opacity: 0;
         animation: fadeIn 0.8s ease forwards 0.8s;
     }
@@ -187,7 +189,7 @@ import Layout from "../layouts/Layout.astro";
         align-items: flex-start;
         gap: 12px;
         margin-bottom: 16px;
-        color: var(--gray);
+        color: var(--text-secondary);
         font-size: 0.95rem;
         line-height: 1.5;
     }
@@ -205,7 +207,7 @@ import Layout from "../layouts/Layout.astro";
 
     .next-steps li strong {
         color: #fff;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     /* Social CTAs */
@@ -225,13 +227,13 @@ import Layout from "../layouts/Layout.astro";
         align-items: center;
         gap: 10px;
         padding: 14px 28px;
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
+        background: var(--surface-1);
+        border: 1px solid var(--surface-border-strong);
+        border-radius: var(--radius-md);
         color: #fff;
         text-decoration: none;
         font-size: 0.95rem;
-        font-weight: 500;
+        font-weight: 600;
         font-family: 'Inter', sans-serif;
         transition: all 0.2s;
         cursor: pointer;
@@ -256,7 +258,7 @@ import Layout from "../layouts/Layout.astro";
         margin-top: auto;
         padding-top: 60px;
         font-size: 0.85rem;
-        color: var(--gray);
+        color: var(--text-muted);
         opacity: 0;
         animation: fadeIn 0.8s ease forwards 1.2s;
     }
