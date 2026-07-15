@@ -9,7 +9,7 @@ interface Props {
 
 const {
     title,
-    description = "The workout tracking app built for serious lifters. Track drop sets, supersets, myo-reps, and progressive overload with precision.",
+    description = "Workout tracking for serious lifters. Log drop sets, supersets, myo-reps and giant sets exactly as you programme them. No AI coaching. No ads, ever.",
     noIndex = false,
     canonicalUrl,
     ogImage = "https://ironforge.app/Logo.png"
@@ -50,14 +50,17 @@ const {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap"
             rel="stylesheet"
         />
 
         <slot name="head" />
     </head>
     <body>
-        <slot />
+        <a href="#main-content" class="skip-link">Skip to content</a>
+        <main id="main-content">
+            <slot />
+        </main>
     </body>
 </html>
 
