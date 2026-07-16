@@ -12,7 +12,7 @@ const {
     description = "Workout tracking for serious lifters. Log drop sets, supersets, myo-reps and giant sets exactly as you programme them. No AI coaching. No ads, ever.",
     noIndex = false,
     canonicalUrl,
-    ogImage = "https://ironforge.app/Logo.png"
+    ogImage = "https://ironforge.app/og.png"
 } = Astro.props;
 ---
 
@@ -21,6 +21,7 @@ const {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#0a0a0a" />
         <title>{title}</title>
 
         <!-- SEO Meta Tags -->
@@ -49,10 +50,21 @@ const {
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Load the font stylesheet without blocking render: apply it only for
+             print until it finishes loading, then switch to all. display=swap
+             keeps text visible while the fonts arrive. -->
         <link
             href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap"
             rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
         />
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap"
+                rel="stylesheet"
+            />
+        </noscript>
 
         <slot name="head" />
     </head>

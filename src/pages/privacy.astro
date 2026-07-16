@@ -16,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
             line-height: 1.7;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 760px) {
             .container {
                 padding: 40px 24px;
             }
@@ -29,7 +29,7 @@ import Layout from "../layouts/Layout.astro";
             gap: 12px;
             margin-bottom: 48px;
             text-decoration: none;
-            color: #fff;
+            color: var(--text-primary);
             width: fit-content;
         }
 
@@ -52,7 +52,7 @@ import Layout from "../layouts/Layout.astro";
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             letter-spacing: 0.05em;
-            color: #fff;
+            color: var(--text-primary);
         }
 
         h2 {
@@ -62,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
             margin-top: 2.5rem;
             margin-bottom: 1rem;
             letter-spacing: 0.05em;
-            color: var(--light-gray);
+            color: var(--text-secondary);
         }
 
         p {
@@ -100,7 +100,7 @@ import Layout from "../layouts/Layout.astro";
         .termly-section {
             margin-top: 60px;
             padding-top: 60px;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid var(--surface-border-strong);
         }
 
         .termly-section > h1 {
@@ -113,7 +113,7 @@ import Layout from "../layouts/Layout.astro";
 
         .termly-container {
             background: transparent;
-            color: #ffffff;
+            color: var(--text-primary);
         }
 
         /* Termly Specific Overrides */
@@ -126,13 +126,13 @@ import Layout from "../layouts/Layout.astro";
         [data-custom-class="title"] * {
             font-family: inherit !important;
             font-size: 24px !important;
-            color: #ffffff !important;
+            color: var(--text-primary) !important;
         }
 
         [data-custom-class="subtitle"],
         [data-custom-class="subtitle"] * {
             font-family: inherit !important;
-            color: var(--gray) !important;
+            color: var(--text-secondary) !important;
             font-size: 14px !important;
         }
 
@@ -140,19 +140,19 @@ import Layout from "../layouts/Layout.astro";
         [data-custom-class="heading_1"] * {
             font-family: inherit !important;
             font-size: 18px !important;
-            color: #ffffff !important;
+            color: var(--text-primary) !important;
         }
 
         [data-custom-class="heading_2"],
         [data-custom-class="heading_2"] * {
             font-family: inherit !important;
             font-size: 16px !important;
-            color: var(--light-gray) !important;
+            color: var(--text-secondary) !important;
         }
 
         [data-custom-class="body_text"],
         [data-custom-class="body_text"] * {
-            color: var(--gray) !important;
+            color: var(--text-secondary) !important;
             font-size: 14px !important;
             font-family: inherit !important;
             line-height: 1.7 !important;
@@ -187,7 +187,7 @@ import Layout from "../layouts/Layout.astro";
         table th,
         .privacy-table th {
             background: rgba(255, 255, 255, 0.08);
-            color: #fff !important;
+            color: var(--text-primary) !important;
             font-weight: 600;
         }
 
@@ -206,14 +206,14 @@ import Layout from "../layouts/Layout.astro";
         table td *,
         .privacy-table th *,
         .privacy-table td * {
-            color: var(--gray) !important;
+            color: var(--text-secondary) !important;
         }
 
         table th strong,
         table th * strong,
         .privacy-table th strong,
         .privacy-table th * strong {
-            color: #fff !important;
+            color: var(--text-primary) !important;
         }
 
         /* Collected column styling */
@@ -242,11 +242,11 @@ import Layout from "../layouts/Layout.astro";
         .footer {
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--surface-border-strong);
         }
 
         .footer a {
-            color: var(--gray);
+            color: var(--text-secondary);
             font-size: 0.9rem;
         }
 
@@ -256,7 +256,10 @@ import Layout from "../layouts/Layout.astro";
     </style>
         <div class="container">
             <a href="/" class="logo">
-                <img src="/Logo.png" alt="Iron Forge Logo" />
+                <picture>
+                    <source srcset="/Logo.webp" type="image/webp" />
+                    <img src="/Logo.png" alt="Iron Forge Logo" width="32" height="32" />
+                </picture>
                 <span>IRON FORGE</span>
             </a>
 

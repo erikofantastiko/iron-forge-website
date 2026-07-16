@@ -3,6 +3,36 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-07-16 — Site review: SEO, design-token and correctness pass
+
+Worked through a full review of the site. No redesign, only hygiene, consistency
+and correctness.
+
+Technik & SEO: added `@astrojs/sitemap` (filtered to the indexable home page only,
+the noindex thanks/legal/privacy pages are excluded), a `robots.txt` pointing at the
+sitemap, a proper branded 1200x630 `og.png` social card (replacing the reused logo)
+and pointed the Open Graph/Twitter defaults at it, a `theme-color` meta, a
+non-render-blocking Google Fonts load (`media="print"` swap with a `noscript`
+fallback), an `astro check` step in CI plus a `check` npm script, a real README, and
+set the empty `package.json` name.
+
+Design-Konsistenz: converged the three mobile breakpoints (600/768px) onto the home
+page's 760px; replaced raw `#fff` with `var(--text-primary)` and `border-radius: 8px`
+with `var(--radius-md)` across the pages and globals; swapped duplicate `rgba()`
+literals for the matching tokens; migrated legal and privacy off the legacy
+`--gray`/`--light-gray` aliases (then removed those aliases) and gave both pages the
+same `<picture>` WebP logo with explicit dimensions; added a site-wide
+`:focus-visible` outline so keyboard focus is finally visible. Left privacy's
+data-table `rgba` borders raw on purpose, as no token matches their functional need.
+
+Inhalt & Korrektheit: switched the Kit waitlist form from an inline success message
+to a redirect to the existing `/thanks` page, which was otherwise orphaned. Confirmed
+with the owner that the differing legal "Last updated" dates are correct as-is (only
+design changed, not policy) and that `ironforge.labs@gmail.com` is the intended
+contact, so neither was touched. The Cloudflare Web Analytics claim in the legal and
+privacy pages is correct: it runs via Cloudflare's automatic edge setup, which is why
+no beacon script appears in the source.
+
 ## 2026-07-16 — Fix copy flagged by the self-check
 
 The copy-reviewer pass flagged three Must-Fix items in the existing copy.
