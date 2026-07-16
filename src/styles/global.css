@@ -173,7 +173,6 @@ input:focus-visible,
 .formkit-submit:focus-visible {
     outline: 2px solid var(--red);
     outline-offset: 2px;
-    border-radius: var(--radius-sm);
 }
 
 /* Kit form runtime-injected alerts (ck.5.js adds these after mount, so they
