@@ -3,6 +3,16 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-07-16 — Correct the method glosses to match the product
+
+The founder corrected two glosses for accuracy. Drop sets run one set into the next
+at a lighter weight (set after set, not "keep a hard set going"). Myo-reps keep going
+at the same weight after short rests to add volume, not "short bursts". Also confirmed
+the set-type sizes: a superset is exactly two exercises and adding more makes it a
+giant set, so the Giant sets row now says "Three or more exercises back to back" (was
+the vaguer "Several ... repeated for rounds"), while the Supersets row's "Two
+exercises" stays. Copy-reviewer passed.
+
 ## 2026-07-16 — Plain-English glosses for the method terms
 
 Added short plain-English explanations for the training terms in the "What it does"
