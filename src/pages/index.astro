@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-    title="Iron Forge - Workout tracking for serious lifters"
+    title="Iron Forge · Workout tracking for serious lifters"
     description="Workout tracking for serious lifters. Log drop sets, supersets, myo-reps and giant sets exactly as you programme them. No AI coaching. No feed, no followers, no leaderboards. No ads, ever."
     canonicalUrl="https://ironforge.app/"
 >
@@ -64,7 +64,7 @@ import Layout from "../layouts/Layout.astro";
                     data-uid="f1beae323b"
                     data-format="inline"
                     data-version="5"
-                    data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"You are on the list. We will email you when Iron Forge launches on iOS."}}}'
+                    data-options='{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"https://ironforge.app/thanks","success_message":"You are on the list. We will email you when Iron Forge launches on iOS."}}}'
                 >
                     <div data-style="clean">
                         <ul
@@ -116,9 +116,9 @@ import Layout from "../layouts/Layout.astro";
         <div class="section">
             <h2 class="eyebrow">What it does</h2>
             <div class="spec">
-                <div class="row"><div class="k">Methods</div><div class="v"><b>Drop sets, supersets, myo-reps and giant sets.</b> Logged as structures, not workarounds.</div></div>
-                <div class="row"><div class="k">Supersets</div><div class="v">Per-member configuration. Different exercises, reps, loads and set counts within one superset.</div></div>
-                <div class="row"><div class="k">Giant sets</div><div class="v">Ragged rounds. Each exercise runs its own number of rounds.</div></div>
+                <div class="row"><div class="k">Methods</div><div class="v"><b>Drop sets, supersets, myo-reps and giant sets.</b> Logged as structures, not workarounds. Drop sets keep a hard set going at a lighter weight. Myo-reps add short bursts after one hard set.</div></div>
+                <div class="row"><div class="k">Supersets</div><div class="v">Two exercises back to back with no rest. Set up each one on its own: different exercises, reps, loads and set counts.</div></div>
+                <div class="row"><div class="k">Giant sets</div><div class="v">Several exercises back to back, repeated for rounds. Each one can run its own number of rounds.</div></div>
                 <div class="row"><div class="k">Recovery</div><div class="v">HRV (heart-rate variability, a recovery signal), sleep and resting heart rate from Apple Health, scored into a daily readiness number. Evidence-aligned.</div></div>
                 <div class="row"><div class="k">Progression</div><div class="v">Plateau detection across your last six logged sessions, then a suggested target weight and reps. It suggests, it does not decide.</div></div>
                 <div class="row"><div class="k">RPE</div><div class="v">Rate of perceived exertion, how hard a set felt. Logged per exercise, by hand. Nothing auto-calculated.</div></div>
@@ -176,7 +176,7 @@ import Layout from "../layouts/Layout.astro";
     .header-in{display:flex;align-items:center;justify-content:space-between;padding:22px 0;}
     .brand{display:flex;align-items:center;gap:11px;}
     .brand img{width:34px;height:34px;display:block;}
-    .brand .wm{font-weight:700;font-size:1.05rem;letter-spacing:0.12em;color:#fff;}
+    .brand .wm{font-weight:700;font-size:1.05rem;letter-spacing:0.12em;color:var(--text-primary);}
     .status{
         display:inline-flex;align-items:center;gap:8px;font-family:"DM Mono",monospace;
         font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);
@@ -188,7 +188,7 @@ import Layout from "../layouts/Layout.astro";
     .hero .eyebrow{display:block;margin-bottom:26px;}
     h1{
         font-weight:600;font-size:clamp(2.9rem,6.4vw,5.1rem);line-height:1.02;
-        letter-spacing:-0.038em;max-width:16ch;color:#fff;
+        letter-spacing:-0.038em;max-width:16ch;color:var(--text-primary);
     }
     h1 .b{display:block;color:var(--text-secondary);font-weight:500;}
     .hero p.sub{margin-top:30px;max-width:52ch;font-size:1.28rem;color:var(--text-secondary);line-height:1.58;}
@@ -202,13 +202,13 @@ import Layout from "../layouts/Layout.astro";
     .formkit-field{flex:1;min-width:240px;margin:0;}
     .formkit-input{
         width:100%;background:transparent;color:var(--text-primary);
-        border:1px solid var(--surface-border-strong);border-radius:8px;padding:15px 17px;
+        border:1px solid var(--surface-border-strong);border-radius:var(--radius-md);padding:15px 17px;
         font-family:"DM Sans",sans-serif;font-size:1.05rem;outline:none;transition:border-color .18s;
     }
     .formkit-input::placeholder{color:var(--text-muted);}
     .formkit-input:focus{border-color:var(--text-secondary);}
     .formkit-submit{
-        background:var(--red);color:#fff;border:none;border-radius:8px;padding:15px 28px;
+        background:var(--red);color:var(--text-primary);border:none;border-radius:var(--radius-md);padding:15px 28px;
         font-family:"DM Sans",sans-serif;font-weight:600;font-size:1.03rem;cursor:pointer;
         transition:background .18s;white-space:nowrap;
     }
@@ -251,7 +251,7 @@ import Layout from "../layouts/Layout.astro";
     .refusal .eyebrow{display:block;margin-bottom:28px;}
     .refusal .big{
         font-size:clamp(2rem,3.8vw,3.05rem);font-weight:600;
-        letter-spacing:-0.03em;line-height:1.14;max-width:20ch;color:#fff;
+        letter-spacing:-0.03em;line-height:1.14;max-width:20ch;color:var(--text-primary);
     }
     .refusal .big .dim{color:var(--text-secondary);}
     .refusal p{margin-top:26px;max-width:48ch;color:var(--text-secondary);font-size:1.2rem;line-height:1.58;}
@@ -259,11 +259,11 @@ import Layout from "../layouts/Layout.astro";
     /* Footer */
     footer{padding:54px 0 66px;}
     .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
-    .foot .about strong{display:block;font-weight:600;font-size:1rem;margin-bottom:3px;color:#fff;}
+    .foot .about strong{display:block;font-weight:600;font-size:1rem;margin-bottom:3px;color:var(--text-primary);}
     .foot .about span{color:var(--text-muted);font-size:.92rem;}
     .foot .links{display:flex;gap:14px;align-items:center;font-size:.95rem;}
     .foot .links a{color:var(--text-secondary);text-decoration:none;transition:color .18s;}
-    .foot .links a:hover{color:#fff;text-decoration:none;}
+    .foot .links a:hover{color:var(--text-primary);text-decoration:none;}
     .foot .sep{color:var(--surface-border-strong);}
     .foot-base{
         display:flex;justify-content:space-between;align-items:center;gap:16px;

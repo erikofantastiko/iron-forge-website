@@ -16,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
             line-height: 1.7;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 760px) {
             .container {
                 padding: 40px 24px;
             }
@@ -29,7 +29,7 @@ import Layout from "../layouts/Layout.astro";
             gap: 12px;
             margin-bottom: 48px;
             text-decoration: none;
-            color: #fff;
+            color: var(--text-primary);
             width: fit-content;
         }
 
@@ -52,7 +52,7 @@ import Layout from "../layouts/Layout.astro";
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             letter-spacing: 0.05em;
-            color: #fff;
+            color: var(--text-primary);
         }
 
         h2 {
@@ -62,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
             margin-top: 2.5rem;
             margin-bottom: 1rem;
             letter-spacing: 0.05em;
-            color: var(--light-gray);
+            color: var(--text-primary);
         }
 
         p {
@@ -100,7 +100,7 @@ import Layout from "../layouts/Layout.astro";
         .footer {
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--surface-border-strong);
         }
 
         .footer a {
@@ -115,7 +115,10 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="container">
         <a href="/" class="logo">
-            <img src="/Logo.png" alt="Iron Forge Logo" />
+            <picture>
+                <source srcset="/Logo.webp" type="image/webp" />
+                <img src="/Logo.png" alt="Iron Forge Logo" width="32" height="32" />
+            </picture>
             <span>IRON FORGE</span>
         </a>
 
