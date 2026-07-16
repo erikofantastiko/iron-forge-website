@@ -3,6 +3,17 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-07-16 — Plain-English glosses for the method terms
+
+Added short plain-English explanations for the training terms in the "What it does"
+spec sheet, in the same inline-gloss style the page already uses for HRV and RPE.
+Drop sets and myo-reps now get a one-line meaning in the Methods row; the Supersets
+row opens by defining a superset; the Giant sets row replaces the unclear "Ragged
+rounds." with a plain definition while keeping the real feature (each exercise can run
+its own number of rounds). Definitions taken from the website-content glossary. The
+copy-reviewer caught an early contradiction in the giant-sets wording ("one round" vs
+"its own number of rounds"), which was reworded.
+
 ## 2026-07-16 — Copy fix on the homepage
 
 The copy-reviewer flagged one Must-Fix: the Supersets spec row opened with
