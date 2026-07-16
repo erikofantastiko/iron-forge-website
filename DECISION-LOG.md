@@ -3,6 +3,13 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-07-16 — Copy fix on the homepage
+
+The copy-reviewer flagged one Must-Fix: the Supersets spec row opened with
+"Per-member configuration", jargon a first-time visitor cannot parse. Rewrote it
+to "Set up each exercise on its own." Also aligned the homepage `<title>`
+separator to the house-style middot ( · ) used elsewhere on the site.
+
 ## 2026-07-16 — Site review: SEO, design-token and correctness pass
 
 Worked through a full review of the site. No redesign, only hygiene, consistency
