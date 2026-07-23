@@ -18,6 +18,18 @@ it is meant to fire on the day the app actually ships, and its copy is flagged a
 reference text for a future post-launch homepage rewrite; nothing on the live site
 changed, which still correctly reads "Pre-launch · iOS".
 
+## 2026-07-23 — Grammar, readability and jargon check on the newsletter templates
+
+Ran a grammar/readability/jargon pass on the two Kit templates. Fixed three things:
+spelled out "HRV" as "heart-rate variability" in the launch email's feature list
+(the site always glosses this term, the email bullet had dropped the explanation),
+rewrote the two badges ("NEW UPDATE", "NOW LIVE") in sentence case in the HTML source
+since CSS already applies the visual uppercase, which reads more naturally for screen
+readers than hard-coded all-caps text, and normalised the launch email's `<title>` from
+"Iron Forge is LIVE" to "Iron Forge is live" to match the site's restrained tone.
+Everything else checked clean: grammar, apostrophe style and the missing Oxford comma
+all already matched the rest of the site.
+
 ## 2026-07-16 — Correct the method glosses to match the product
 
 The founder corrected two glosses for accuracy. Drop sets run one set into the next
