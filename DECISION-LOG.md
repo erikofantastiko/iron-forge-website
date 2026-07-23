@@ -3,6 +3,21 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-07-23 — Add and align the two Kit newsletter templates
+
+Added `emails/feature-announcement.html` and `emails/launch-announcement.html`, the
+first repo copies of the marketing emails sent through Kit. Aligned both to the
+current site: card/badge/text colours and radii now match the `global.css` tokens
+instead of ad-hoc hex values, the em-dash sign-off ("— Erik") was dropped since
+em-dashes are banned outright, and a stray feedback emoji was removed. The launch
+email's feature list was rewritten to match the homepage's actual wording and current
+load-bearing facts (giant sets added, recovery described as evidence-aligned HRV/sleep/
+resting-heart-rate rather than vague "real recovery tracking", progression phrased as
+suggestions not automation). The launch email keeps its "now live" framing on purpose:
+it is meant to fire on the day the app actually ships, and its copy is flagged as the
+reference text for a future post-launch homepage rewrite; nothing on the live site
+changed, which still correctly reads "Pre-launch · iOS".
+
 ## 2026-07-16 — Correct the method glosses to match the product
 
 The founder corrected two glosses for accuracy. Drop sets run one set into the next
