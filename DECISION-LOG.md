@@ -3,6 +3,17 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-07-23 — Fix list indentation in the newsletter templates
+
+The rendered launch email showed wrapped list items falling back to the far-left margin
+under the checkmark instead of lining up under the text. Both templates put the marker
+(the red tick, or the numbered circle) and the text in a single cell, so there was no
+hanging indent. Split each list row into a two-cell layout: a narrow, top-aligned marker
+cell plus a text cell, so wrapped lines now hang under the text. The list stays flush
+with the surrounding body copy; the markers already set it apart, so no extra block
+indent was added. Applied to both the launch email's tick list and the feature email's
+numbered "How it works" steps. No copy changed.
+
 ## 2026-07-23 — Add and align the two Kit newsletter templates
 
 Added `emails/feature-announcement.html` and `emails/launch-announcement.html`, the
