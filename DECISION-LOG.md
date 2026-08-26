@@ -3,6 +3,17 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-08-26 — Fix two design-system breaches in the Kit email templates
+
+Removed the red accent bar (`border-left: 3px solid #E63946`) on the feature email's
+highlight card: red is reserved for action, not decoration, and the `#1a1a1e` fill
+carries the separation on its own. Made the card symmetric again by moving its radius
+from `0 10px 10px 0` to a plain `10px`. Also raised both templates' footer greys from
+`#555555` and `#444444` to `#8b8b91` (`--text-muted`): against the `#0a0a0a` email
+background the old values failed WCAG AA (about 2.0-2.6:1) while `#8b8b91` passes (about
+5.8:1) and still keeps the unsubscribe and tagline lines recessed. Values stay hardcoded
+hex because email clients cannot read CSS custom properties.
+
 ## 2026-07-23 — Fix list indentation in the newsletter templates
 
 The rendered launch email showed wrapped list items falling back to the far-left margin
