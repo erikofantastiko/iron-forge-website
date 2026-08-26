@@ -3,6 +3,18 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-08-26 — Correct stale design-system claims in the rule docs
+
+The `design-audit.md` pass found that `web-design.md` and `web-design-reviewer.md` still
+described drift that no longer exists: hardcoded `border-radius: 8px`, raw `#fff`, and
+three mobile breakpoints (600/760/768px). All three were cleared in the 2026-07-16 token
+pass. Rewrote the "Known inconsistencies to converge on" section and the reviewer's
+guard line to describe the repo as it actually is (radii on tokens, a single `760px`
+breakpoint, `#fff` gone) while still guarding against reintroducing those values. The
+only genuinely remaining drift, a few `rgba()` literals, is now named accurately. Left
+the intended single-source `design-system.md` uncreated by choice; `web-design.md` plus
+`global.css` remain the source of truth.
+
 ## 2026-08-26 — Fix two design-system breaches in the Kit email templates
 
 Removed the red accent bar (`border-left: 3px solid #E63946`) on the feature email's
