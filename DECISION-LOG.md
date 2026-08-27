@@ -3,6 +3,16 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-08-26 — Record the app/website red difference as intentional
+
+A red audit of the iOS app repo confirmed the app runs two deliberate reds (`#ef4444`
+for CTAs, `#e23636` for its `--primary` tint token) and never references the website
+brand red `#e63946`; the app split is itself a documented app-side decision. Rather than
+converge the two products, we are recording the difference as intentional and known. The
+website red stays `#e63946` (it is also baked into `logo.png` and `favicon.svg`); a note
+in `web-design.md` now warns against "fixing" it to match the app. No colours changed. A
+matching note on the app side still needs to be added in that repo.
+
 ## 2026-08-26 — Correct stale design-system claims in the rule docs
 
 The `design-audit.md` pass found that `web-design.md` and `web-design-reviewer.md` still

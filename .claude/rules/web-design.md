@@ -20,6 +20,13 @@ tokens. Do not hardcode a value when a token exists.
 
 One red accent, near-black surfaces, three text shades. Do not add new accent colours.
 
+The website brand red is `#e63946`, and it stays `#e63946` (it is also baked into
+`logo.png` and `favicon.svg`). The iOS app deliberately uses different red literals
+(`#ef4444` for CTAs, `#e23636` for its `--primary` tint), a documented app-side
+decision. That app/website difference is intentional and known, not drift: do not
+"converge" the website red onto the app's values, and do not treat the mismatch as a
+bug to fix here.
+
 ### Type
 
 Two families, both from Google Fonts:
