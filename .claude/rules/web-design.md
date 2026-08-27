@@ -20,6 +20,13 @@ tokens. Do not hardcode a value when a token exists.
 
 One red accent, near-black surfaces, three text shades. Do not add new accent colours.
 
+The website brand red is `#e63946`, and it stays `#e63946` (it is also baked into
+`logo.png` and `favicon.svg`). The iOS app deliberately uses different red literals
+(`#ef4444` for CTAs, `#e23636` for its `--primary` tint), a documented app-side
+decision. That app/website difference is intentional and known, not drift: do not
+"converge" the website red onto the app's values, and do not treat the mismatch as a
+bug to fix here.
+
 ### Type
 
 Two families, both from Google Fonts:
@@ -65,12 +72,14 @@ Dark, restrained, serious, confident. The anti-hype spirit applies to visuals to
 
 ## Known inconsistencies to converge on
 
-The site has a few small inconsistencies. When you touch nearby code, nudge toward the
-token, do not spread the inconsistency:
+Most of the earlier drift has been cleared (see `DECISION-LOG.md` and the point-in-time
+`design-audit.md`): radii are on the `6/10/14px` tokens, the mobile breakpoint is a
+single `760px`, and raw `#fff` is gone. Hold that line, and nudge the few remaining rough
+edges toward the tokens when you touch nearby code:
 
-- Some components hardcode `border-radius: 8px`. Prefer the radius tokens (`6/10/14px`).
-- There are three mobile breakpoints in use (600px, 760px, 768px). Prefer one when you
-  can, and do not add a fourth.
-- Some CSS uses raw `#fff` and rgba literals. Prefer the text and surface tokens.
-- Spacing is ad-hoc with no scale. Keep new spacing on the existing rhythm rather than
-  inventing new values.
+- Keep radii on the `--radius-sm/md/lg` tokens. No stray `8px`.
+- Keep the single `760px` mobile breakpoint. Do not add a second one.
+- A few raw `rgba()` literals remain: the privacy data-table borders and the ambient
+  background tints in `global.css`. Prefer the surface and border tokens where one fits.
+- Spacing is still ad-hoc with no scale. Keep new spacing on the existing rhythm rather
+  than inventing new values.

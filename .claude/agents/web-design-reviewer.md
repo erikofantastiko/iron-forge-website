@@ -31,8 +31,9 @@ Review the change (or the pages you were asked to check) against this checklist.
    serious and precise, never loud or gamified.
 
 Ground each finding in a specific token, file, or line. Prefer the site's tokens
-(colours, radii, shadows) over hardcoded values, and call out where a change spreads a
-known inconsistency (hardcoded `8px` radii, raw `#fff`/rgba, extra breakpoints).
+(colours, radii, shadows) over hardcoded values, and call out where a change introduces
+an off-token value: a radius not on the `6/10/14px` scale, a raw `#fff`, an rgba literal
+where a surface or border token fits, or a mobile breakpoint other than `760px`.
 
 ## Output
 
