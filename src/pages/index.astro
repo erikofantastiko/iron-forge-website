@@ -11,23 +11,103 @@ import Layout from "../layouts/Layout.astro";
         <!-- Additional SEO -->
         <meta name="keywords" content="workout app, fitness tracker, drop sets, supersets, myo-reps, giant sets, progressive overload, gym app, iOS workout app" />
         <meta property="og:url" content="https://ironforge.app/" />
+        <meta property="og:locale" content="en_GB" />
         <meta name="twitter:url" content="https://ironforge.app/" />
 
         <!-- Structured Data (JSON-LD) -->
         <script type="application/ld+json" is:inline>
         {
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Iron Forge",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "iOS",
-            "description": "Workout tracking for serious lifters. Log drop sets, supersets, myo-reps and giant sets exactly as you programme them.",
-            "url": "https://ironforge.app",
-            "logo": "https://ironforge.app/Logo.png",
-            "author": {
-                "@type": "Person",
-                "name": "Erik"
-            }
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://ironforge.app/#organisation",
+                    "name": "Iron Forge",
+                    "url": "https://ironforge.app/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://ironforge.app/Logo.png"
+                    },
+                    "sameAs": [
+                        "https://www.instagram.com/ironforge.app/"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://ironforge.app/#website",
+                    "url": "https://ironforge.app/",
+                    "name": "Iron Forge",
+                    "alternateName": ["ironforge.app", "Iron Forge workout tracker"],
+                    "publisher": { "@id": "https://ironforge.app/#organisation" }
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "@id": "https://ironforge.app/#app",
+                    "name": "Iron Forge",
+                    "applicationCategory": "HealthApplication",
+                    "operatingSystem": "iOS 16.0 or later",
+                    "description": "Workout tracking for serious lifters. Log drop sets, supersets, myo-reps and giant sets exactly as you programme them.",
+                    "url": "https://ironforge.app/",
+                    "image": "https://ironforge.app/og.png",
+                    "author": { "@id": "https://ironforge.app/#organisation" }
+                }
+            ]
+        }
+        </script>
+        <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is Iron Forge?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Iron Forge is a workout tracker for iPhone, built by a lifter for serious lifters. It logs drop sets, supersets, myo-reps and giant sets exactly as you programme them. It has not launched yet. Join the waitlist and we will email you when it ships."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "When does it launch?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no public date yet. We would rather ship than promise a date and slip it. The waitlist gets the first email when Iron Forge launches on iOS."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much will it cost?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "€7.99 a month or €69.99 a year, which saves about 27%. The subscription renews automatically unless you cancel."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Which devices does it run on?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "iPhone only, on iOS 16 or later. There is no Android version."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does it use AI?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No AI coaching. Progression works by plateau detection: the app looks at your last six logged sessions, then may suggest a target weight and reps. It suggests, it does not decide."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How is it different from apps like Strong or Hevy?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Strong and Hevy are solid general trackers. Iron Forge is narrower. It is built around advanced set types, so a drop set or a giant set is logged as one structure, not a workaround. And it leaves things out on purpose: no AI coaching, no feed, no followers, no ads, ever."
+                    }
+                }
+            ]
         }
         </script>
     </Fragment>
@@ -135,6 +215,39 @@ import Layout from "../layouts/Layout.astro";
             <p>Just precise tracking for people who do not need motivation, only data.</p>
         </div>
     </section>
+
+    <!-- FAQ -->
+    <div class="wrap">
+        <div class="section">
+            <h2 class="eyebrow">Questions</h2>
+            <dl class="qa">
+                <div class="item">
+                    <dt>What is Iron Forge?</dt>
+                    <dd>Iron Forge is a workout tracker for iPhone, built by a lifter for serious lifters. It logs drop sets, supersets, myo-reps and giant sets exactly as you programme them. It has not launched yet. Join the waitlist and we will email you when it ships.</dd>
+                </div>
+                <div class="item">
+                    <dt>When does it launch?</dt>
+                    <dd>There is no public date yet. We would rather ship than promise a date and slip it. The waitlist gets the first email when Iron Forge launches on iOS.</dd>
+                </div>
+                <div class="item">
+                    <dt>How much will it cost?</dt>
+                    <dd>€7.99 a month or €69.99 a year, which saves about 27%. The subscription renews automatically unless you cancel.</dd>
+                </div>
+                <div class="item">
+                    <dt>Which devices does it run on?</dt>
+                    <dd>iPhone only, on iOS 16 or later. There is no Android version.</dd>
+                </div>
+                <div class="item">
+                    <dt>Does it use AI?</dt>
+                    <dd>No AI coaching. Progression works by plateau detection: the app looks at your last six logged sessions, then may suggest a target weight and reps. It suggests, it does not decide.</dd>
+                </div>
+                <div class="item">
+                    <dt>How is it different from apps like Strong or Hevy?</dt>
+                    <dd>Strong and Hevy are solid general trackers. Iron Forge is narrower. It is built around advanced set types, so a drop set or a giant set is logged as one structure, not a workaround. And it leaves things out on purpose: no AI coaching, no feed, no followers, no ads, ever.</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -246,6 +359,13 @@ import Layout from "../layouts/Layout.astro";
     .spec .v{font-size:1.17rem;color:var(--text-secondary);line-height:1.55;max-width:56ch;}
     .spec .v b{color:var(--text-primary);font-weight:600;}
 
+    /* FAQ */
+    .qa{display:flex;flex-direction:column;margin:0;}
+    .qa .item{padding:24px 0;border-top:1px solid var(--surface-border);}
+    .qa .item:first-child{border-top:none;padding-top:0;}
+    .qa dt{font-size:1.17rem;font-weight:600;color:var(--text-primary);max-width:56ch;}
+    .qa dd{margin:10px 0 0;font-size:1.08rem;color:var(--text-secondary);line-height:1.55;max-width:56ch;}
+
     /* Refusal */
     .refusal{padding:98px 0;border-bottom:1px solid var(--surface-border);}
     .refusal .eyebrow{display:block;margin-bottom:28px;}
@@ -278,6 +398,7 @@ import Layout from "../layouts/Layout.astro";
         h1{font-size:clamp(2.5rem,9vw,3.2rem);}
         .section{grid-template-columns:1fr;gap:16px;padding:46px 0;}
         .spec .row{grid-template-columns:1fr;gap:7px;padding:22px 0;}
+        .qa .item{padding:22px 0;}
         .refusal{padding:66px 0;}
         .foot{flex-direction:column;gap:20px;}
     }
