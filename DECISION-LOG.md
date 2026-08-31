@@ -3,6 +3,13 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-08-31 — Record the SEO owner actions in the repo
+
+Added `SEO-NEXT-STEPS.md` so the off-repo SEO follow-ups (Search Console sitemap
+submission, the Instagram bio link, a couple of real backlinks, the App Store cross-link
+after launch) are tracked in the repo instead of only in a chat. Domain verification and
+home-page indexing are already marked done. No site or copy changes.
+
 ## 2026-08-31 — SEO: entity signals and an FAQ section for Google visibility
 
 The site was invisible on Google even for its own name; searches for "ironforge.app"
