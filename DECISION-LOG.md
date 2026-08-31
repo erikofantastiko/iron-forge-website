@@ -3,6 +3,21 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-08-31 — SEO: entity signals and an FAQ section for Google visibility
+
+The site was invisible on Google even for its own name; searches for "ironforge.app"
+surface unrelated apps that share the Iron Forge name. On-page tech SEO was already
+solid (title, description, canonical, sitemap, robots.txt), so the fixes target the
+two real gaps. First, entity signals: the home page JSON-LD grew from a lone
+`SoftwareApplication` into a `@graph` of Organization (with the Instagram profile as
+`sameAs`), WebSite (with `alternateName` "ironforge.app") and a corrected
+SoftwareApplication, so Google can tell this Iron Forge apart from the name-alikes.
+Second, indexable content: a new "Questions" FAQ section (six Q&As on what the app
+is, launch, price, devices, no AI, and how it differs from Strong and Hevy in prose,
+no comparison table) with matching FAQPage JSON-LD. Also added `og:locale`. The
+bigger levers, Search Console verification and backlinks, are owner actions outside
+the repo and were reported to the owner.
+
 ## 2026-08-26 — Record the app/website red difference as intentional
 
 A red audit of the iOS app repo confirmed the app runs two deliberate reds (`#ef4444`
