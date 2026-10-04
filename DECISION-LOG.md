@@ -3,6 +3,13 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-10-04 — Waitlist button label passes WCAG AA
+
+White on the brand red `#e63946` is 4.16:1, below AA's 4.5:1 for normal text. The
+owner kept the brand red, so the button label went from 600 / 1.03rem to 700 / 1.17rem.
+That makes it WCAG "large text", which only needs 3:1. Lighthouse accessibility went
+from 96 to 100.
+
 ## 2026-10-04 — SEO checklist pass: 404 page, crawl fixes, lighter logo
 
 Went through a generic 20-point SEO checklist against the built site. Most of it was
