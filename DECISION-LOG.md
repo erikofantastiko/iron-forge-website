@@ -11,7 +11,7 @@ text, WebP). Fixed the real gaps: added a noindex `404.astro` (there was none, s
 GitHub Pages served its own); dropped `Disallow: /thanks` from `robots.txt` so Google
 can actually read that page's noindex; pointed internal links and the Kit redirect at
 trailing-slash URLs to skip a 301 hop; demoted the two extra h1s on the privacy page
-to h2 (same rendered size); served a 96px logo (2-5KB) instead of the 1024px original
+to h2 (same rendered size); served a 144px logo (sharp at 3x, a few KB) instead of the 1024px original
 (38KB webp) at 32-44px; inlined the CSS; set `lang="en-GB"`. Also fixed a header bug
 on the home page: `.header-in` padding overrode `.wrap`'s, so the logo sat 40px left
 of the content column on desktop and touched the top edge on mobile. Skipped
