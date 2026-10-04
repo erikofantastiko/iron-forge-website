@@ -3,6 +3,27 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-10-04 — Waitlist button label passes WCAG AA
+
+White on the brand red `#e63946` is 4.16:1, below AA's 4.5:1 for normal text. The
+owner kept the brand red, so the button label went from 600 / 1.03rem to 700 / 1.17rem.
+That makes it WCAG "large text", which only needs 3:1. Lighthouse accessibility went
+from 96 to 100.
+
+## 2026-10-04 — SEO checklist pass: 404 page, crawl fixes, lighter logo
+
+Went through a generic 20-point SEO checklist against the built site. Most of it was
+already done (static HTML, sitemap, canonical, meta descriptions, FAQ schema, alt
+text, WebP). Fixed the real gaps: added a noindex `404.astro` (there was none, so
+GitHub Pages served its own); dropped `Disallow: /thanks` from `robots.txt` so Google
+can actually read that page's noindex; pointed internal links and the Kit redirect at
+trailing-slash URLs to skip a 301 hop; demoted the two extra h1s on the privacy page
+to h2 (same rendered size); served a 144px logo (sharp at 3x, a few KB) instead of the 1024px original
+(38KB webp) at 32-44px; inlined the CSS; set `lang="en-GB"`. Also fixed a header bug
+on the home page: `.header-in` padding overrode `.wrap`'s, so the logo sat 40px left
+of the content column on desktop and touched the top edge on mobile. Skipped
+breadcrumbs (one indexable page) and anything off-site (Search Console, backlinks).
+
 ## 2026-08-31 — SEO: entity signals and an FAQ section for Google visibility
 
 The site was invisible on Google even for its own name; searches for "ironforge.app"
