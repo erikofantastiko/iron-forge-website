@@ -117,8 +117,8 @@ import Layout from "../layouts/Layout.astro";
         <div class="wrap header-in">
             <div class="brand">
                 <picture>
-                    <source srcset="/Logo.webp" type="image/webp" />
-                    <img src="/Logo.png" alt="Iron Forge" width="34" height="34" />
+                    <source srcset="/Logo-96.webp" type="image/webp" />
+                    <img src="/Logo-96.png" alt="Iron Forge" width="34" height="34" />
                 </picture>
                 <span class="wm">IRON FORGE</span>
             </div>
@@ -144,7 +144,7 @@ import Layout from "../layouts/Layout.astro";
                     data-uid="f1beae323b"
                     data-format="inline"
                     data-version="5"
-                    data-options='{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"https://ironforge.app/thanks","success_message":"You are on the list. We will email you when Iron Forge launches on iOS."}}}'
+                    data-options='{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"https://ironforge.app/thanks/","success_message":"You are on the list. We will email you when Iron Forge launches on iOS."}}}'
                 >
                     <div data-style="clean">
                         <ul
@@ -258,8 +258,8 @@ import Layout from "../layouts/Layout.astro";
                     <span>Lifter, dad and pilot. Based in Austria.</span>
                 </div>
                 <div class="links">
-                    <a href="/privacy">Privacy</a><span class="sep" aria-hidden="true">·</span>
-                    <a href="/legal">Legal</a><span class="sep" aria-hidden="true">·</span>
+                    <a href="/privacy/">Privacy</a><span class="sep" aria-hidden="true">·</span>
+                    <a href="/legal/">Legal</a><span class="sep" aria-hidden="true">·</span>
                     <a
                         href="https://www.instagram.com/ironforge.app/"
                         target="_blank"
@@ -286,7 +286,7 @@ import Layout from "../layouts/Layout.astro";
 
     /* Header */
     header{border-bottom:1px solid var(--surface-border);}
-    .header-in{display:flex;align-items:center;justify-content:space-between;padding:22px 0;}
+    .header-in{display:flex;align-items:center;justify-content:space-between;padding-block:22px;}
     .brand{display:flex;align-items:center;gap:11px;}
     .brand img{width:34px;height:34px;display:block;}
     .brand .wm{font-weight:700;font-size:1.05rem;letter-spacing:0.12em;color:var(--text-primary);}
@@ -393,7 +393,7 @@ import Layout from "../layouts/Layout.astro";
     .foot-base .cr{font-family:"DM Mono",monospace;font-size:.78rem;color:var(--text-muted);letter-spacing:.05em;}
 
     @media (max-width: 760px){
-        .wrap{padding:0 22px;}
+        .wrap{padding-inline:22px;}
         .hero{padding:72px 0 60px;}
         h1{font-size:clamp(2.5rem,9vw,3.2rem);}
         .section{grid-template-columns:1fr;gap:16px;padding:46px 0;}

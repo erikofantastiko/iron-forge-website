@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Page not found · Iron Forge"
+    description="This page does not exist. Start from the Iron Forge home page."
+    noIndex={true}
+>
+    <header>
+        <div class="wrap header-in">
+            <a href="/" class="brand">
+                <picture>
+                    <source srcset="/Logo-96.webp" type="image/webp" />
+                    <img src="/Logo-96.png" alt="" width="34" height="34" />
+                </picture>
+                <span class="wm">IRON FORGE</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrap">
+            <span class="eyebrow">Error 404</span>
+            <h1>Page not found.</h1>
+            <p class="sub">The link may be old, or the address may have a typo. Start from the home page.</p>
+            <a href="/" class="home">Go to the home page</a>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .wrap{max-width:1080px;margin:0 auto;padding:0 40px;}
+
+    /* Header (matches the home page) */
+    header{border-bottom:1px solid var(--surface-border);}
+    .header-in{display:flex;align-items:center;justify-content:space-between;padding-block:22px;}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;}
+    .brand:hover{text-decoration:none;}
+    .brand img{width:34px;height:34px;display:block;}
+    .brand .wm{font-weight:700;font-size:1.05rem;letter-spacing:0.12em;color:var(--text-primary);}
+
+    /* Hero */
+    .hero{padding:104px 0 96px;}
+    .eyebrow{
+        display:block;margin-bottom:26px;font-family:"DM Mono",monospace;font-size:.82rem;
+        font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);
+    }
+    h1{
+        font-weight:600;font-size:clamp(2.9rem,6.4vw,5.1rem);line-height:1.02;
+        letter-spacing:-0.038em;max-width:16ch;color:var(--text-primary);
+    }
+    .sub{margin-top:30px;max-width:52ch;font-size:1.28rem;color:var(--text-secondary);line-height:1.58;}
+
+    .home{
+        display:inline-block;margin-top:46px;padding:15px 28px;border:1px solid var(--surface-border-strong);
+        border-radius:var(--radius-md);color:var(--text-primary);font-weight:600;font-size:1.03rem;
+        transition:border-color .18s;
+    }
+    .home:hover{border-color:var(--text-secondary);text-decoration:none;}
+
+    @media (max-width: 760px){
+        .wrap{padding-inline:22px;}
+        .hero{padding:72px 0 60px;}
+        h1{font-size:clamp(2.5rem,9vw,3.2rem);}
+    }
+</style>
