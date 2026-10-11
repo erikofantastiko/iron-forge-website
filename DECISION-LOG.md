@@ -3,6 +3,15 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-10-11 — Clean up "Page with redirect" in Search Console, index legal pages
+
+Search Console listed URLs under "Page with redirect". The deploy passed the GitHub
+Pages origin as `--site`, which can put redirecting github.io URLs into the sitemap, so
+the build now takes `site` from `astro.config.mjs` only. Added `trailingSlash: 'always'`
+so every generated URL is the final one GitHub Pages serves. The owner chose to let
+`/legal/` and `/privacy/` be indexed: dropped their `noindex`, gave them canonicals,
+added them to the sitemap, and switched their titles to the site's ` · ` separator.
+
 ## 2026-10-04 — Waitlist button label passes WCAG AA
 
 White on the brand red `#e63946` is 4.16:1, below AA's 4.5:1 for normal text. The
