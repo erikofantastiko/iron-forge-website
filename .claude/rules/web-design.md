@@ -13,10 +13,10 @@ tokens. Do not hardcode a value when a token exists.
 
 - Brand red: `--red: #e63946`, hover `--red-hover: #f04a56`, plus `--red-glow` and
   `--red-soft` for glows and tints. Use `--red` for red text, links, icons and decor.
-- Red fills: `--red-fill: #e31414`, hover `--red-fill-hover: #dc2626`, pressed
-  `--red-fill-active: #b91c1c`. Use these for every red surface with white text on it
-  (buttons, badges, banners). Emails cannot use CSS variables, so they repeat these as
-  uppercase hex (`#E31414`).
+- Red fills: `--red-fill: #d92b3d`, hover `--red-fill-hover: #cd1b35`, pressed
+  `--red-fill-active: #be002a`. Same hue as `--red`, only darker. Use these for every
+  red surface with white text on it (buttons, badges, banners). Emails cannot use CSS
+  variables, so they repeat these as uppercase hex (`#D92B3D`).
 - Surfaces: `--surface-0: #0a0a0a` (page), `--surface-1: #121214` (cards),
   `--surface-2: #1a1a1e` (raised). Borders: `--surface-border` and
   `--surface-border-strong`.
@@ -24,14 +24,19 @@ tokens. Do not hardcode a value when a token exists.
 
 One red accent, near-black surfaces, three text shades. Do not add new accent colours.
 
-Red contrast rule (matches the iOS app, build of 8 Nov 2026): white on any red fill
-must reach 4.5:1 (WCAG AA), at every state and every stop of a gradient.
+Red contrast rule (the same rule as the iOS app, build of 8 Nov 2026): white on any red
+fill must reach 4.5:1 (WCAG AA), at every state and every stop of a gradient.
 
-- White on `--red-fill` is 4.80:1, on its hover 4.83:1, pressed 6.47:1. Pass.
+The website shares the app's rule, not its hex values. The app's fill `#e31414` is a
+more orange, more saturated red (CIEDE2000 9.3 from `#e63946`) and visibly clashes with
+the logo and red text next to it. Keep fills on the brand hue. Do not swap in the app's
+`#e31414`, `#dc2626` or `#b91c1c`.
+
+- White on `--red-fill` is 4.81:1, on its hover 5.52:1, pressed 6.52:1. Pass.
 - White on `--red` (`#e63946`) is only 4.17:1, and on the app's `#e23636` 4.36:1. Never
   put white text on either as a fill.
-- `--red` stays for red text and icons on dark: 4.75:1 on `--surface-0`. Do not swap it
-  for `#e31414`, which is only 4.13:1 there. On `--surface-1` cards `--red` is 4.49:1,
+- `--red` stays for red text and icons on dark: 4.75:1 on `--surface-0`. Do not use
+  `--red-fill` for text, which is only 4.11:1 there. On `--surface-1` cards `--red` is 4.49:1,
   so keep red text on cards to large text (bold 18.67px+) or icons.
 - A white icon with no text on a red fill (the thanks checkmark) only needs 3:1, so it
   may stay on `--red`.
