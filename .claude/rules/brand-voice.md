@@ -16,6 +16,11 @@ The audience filter is seriousness, never age or years of experience. The founde
 has trained for 16+ years; that describes the founder, not the reader. Never gate
 the reader by experience level or age.
 
+Iron Forge is one person, not a team. Never write "we", "us" or "our". When the
+founder speaks, use "I" ("I would rather ship than promise a date"). Otherwise
+rephrase around the reader or the app ("You will get an email"). The legal and
+privacy pages are the exception: "we" is standard wording there.
+
 ## Forbidden words
 
 ### Tier A: always banned

@@ -6,11 +6,11 @@ dated entry: what changed and why, in a sentence or two. Newest at the top.
 ## 2026-11-08 — Say what the waitlist is for, at a readable size
 
 A tester could not tell what the form was for, and the note under it (DM Mono .84rem,
-muted grey) was too small to notice. Added a short line above the form at body size:
-"Iron Forge is not out yet. Join the waitlist and we will email you when it launches
-on iPhone." The note below is now DM Sans at about 1rem in secondary grey: "No spam.
-Only launch news and occasional updates. Unsubscribe any time." That matches the
-privacy page, which also allows occasional development updates.
+muted grey) was too small to notice. Added a short line above the form at the sub
+paragraph's size, semibold, with the first words in red: "Not out yet. Join the
+waitlist to hear when Iron Forge launches on iPhone." The note below is now readable
+DM Sans: "No spam. Unsubscribe any time." Iron Forge is one person, so "we" is gone
+from the marketing copy (FAQ, thanks page, Kit message) and banned in `brand-voice.md`.
 
 ## 2026-10-11 — Clean up "Page with redirect" in Search Console, index legal pages
 
