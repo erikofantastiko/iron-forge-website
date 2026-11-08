@@ -7,7 +7,7 @@ dated entry: what changed and why, in a sentence or two. Newest at the top.
 
 The thanks page listed "Estimated 1RM" without saying what it means. Checked the app
 first: it shows an Est. 1RM tile and chart per exercise, plus weight and volume charts
-and personal records, so the claim is true. The line now reads "Estimated one-rep max
+and personal records, so the claim is true. The line now spells it out: "estimated one-rep max
 (the most you could lift once)". Added 1RM to the glossary and the per-exercise
 progress facts to `website-content.md`.
 
