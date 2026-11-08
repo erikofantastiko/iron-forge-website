@@ -164,7 +164,7 @@ import Layout from "../layouts/Layout.astro";
                                     class="formkit-input"
                                     name="email_address"
                                     aria-label="Email Address"
-                                    aria-describedby="waitlist-intro"
+                                    aria-describedby="waitlist-intro waitlist-note"
                                     placeholder="you@example.com"
                                     required=""
                                     type="email"
@@ -182,7 +182,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                     </div>
                 </form>
-                <p class="form-note">No spam. Only launch news and occasional updates. Unsubscribe any time.</p>
+                <p class="form-note" id="waitlist-note">No spam. Only launch news and occasional updates. Unsubscribe any time.</p>
             </div>
         </div>
     </section>
@@ -311,7 +311,7 @@ import Layout from "../layouts/Layout.astro";
     /* Waitlist (Kit form) */
     .cta{margin-top:46px;max-width:540px;}
     /* Says what the form is for, at a size people actually read. */
-    .cta-intro{margin-bottom:16px;font-size:1.12rem;font-weight:500;line-height:1.5;color:var(--text-primary);text-wrap:pretty;}
+    .cta-intro{margin-bottom:16px;font-size:1.17rem;font-weight:500;line-height:1.55;color:var(--text-primary);text-wrap:pretty;}
     .formkit-form{background:transparent;}
     /* .formkit-alert* live in global.css: Kit injects the success node at runtime,
        which Astro's component-scoped styles cannot reach. */
@@ -334,7 +334,7 @@ import Layout from "../layouts/Layout.astro";
     }
     .formkit-submit:hover{background:var(--red-deep);}
     .formkit-submit:disabled{opacity:.7;cursor:not-allowed;}
-    .form-note{margin-top:12px;font-size:.98rem;line-height:1.5;color:var(--text-secondary);text-wrap:pretty;}
+    .form-note{margin-top:12px;font-size:1rem;line-height:1.55;color:var(--text-secondary);text-wrap:pretty;}
 
     /* Editorial two-column section */
     .section{
