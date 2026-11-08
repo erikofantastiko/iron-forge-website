@@ -11,8 +11,12 @@ tokens. Do not hardcode a value when a token exists.
 
 ### Colour (dark theme)
 
-- Brand red: `--red: #e63946`, hover `--red-hover: #f04a56`, deep `--red-deep: #d12b38`,
-  plus `--red-glow` and `--red-soft` for glows and tints.
+- Brand red: `--red: #e63946`, hover `--red-hover: #f04a56`, plus `--red-glow` and
+  `--red-soft` for glows and tints. Use `--red` for red text, links, icons and decor.
+- Red fills: `--red-fill: #e31414`, hover `--red-fill-hover: #dc2626`, pressed
+  `--red-fill-active: #b91c1c`. Use these for every red surface with white text on it
+  (buttons, badges, banners). Emails cannot use CSS variables, so they repeat these as
+  uppercase hex (`#E31414`).
 - Surfaces: `--surface-0: #0a0a0a` (page), `--surface-1: #121214` (cards),
   `--surface-2: #1a1a1e` (raised). Borders: `--surface-border` and
   `--surface-border-strong`.
@@ -20,12 +24,19 @@ tokens. Do not hardcode a value when a token exists.
 
 One red accent, near-black surfaces, three text shades. Do not add new accent colours.
 
-The website brand red is `#e63946`, and it stays `#e63946` (it is also baked into
-`logo.png` and `favicon.svg`). The iOS app deliberately uses different red literals
-(`#ef4444` for CTAs, `#e23636` for its `--primary` tint), a documented app-side
-decision. That app/website difference is intentional and known, not drift: do not
-"converge" the website red onto the app's values, and do not treat the mismatch as a
-bug to fix here.
+Red contrast rule (matches the iOS app, build of 8 Nov 2026): white on any red fill
+must reach 4.5:1 (WCAG AA), at every state and every stop of a gradient.
+
+- White on `--red-fill` is 4.80:1, on its hover 4.83:1, pressed 6.47:1. Pass.
+- White on `--red` (`#e63946`) is only 4.17:1, and on the app's `#e23636` 4.36:1. Never
+  put white text on either as a fill.
+- `--red` stays for red text and icons on dark: 4.75:1 on `--surface-0`. Do not swap it
+  for `#e31414`, which is only 4.13:1 there. On `--surface-1` cards `--red` is 4.49:1,
+  so keep red text on cards to large text (bold 18.67px+) or icons.
+- A white icon with no text on a red fill (the thanks checkmark) only needs 3:1, so it
+  may stay on `--red`.
+- `logo.png`, `favicon.svg` and `og.png` keep `#e63946`. Logos are exempt from WCAG
+  text contrast.
 
 ### Type
 
