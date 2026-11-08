@@ -64,7 +64,7 @@ import Layout from "../layouts/Layout.astro";
                     "name": "What is Iron Forge?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Iron Forge is a workout tracker for iPhone, built by a lifter for serious lifters. It logs drop sets, supersets, myo-reps and giant sets exactly as you programme them. It has not launched yet. Join the waitlist and we will email you when it ships."
+                        "text": "Iron Forge is a workout tracker for iPhone, built by a lifter for serious lifters. It logs drop sets, supersets, myo-reps and giant sets exactly as you programme them. It has not launched yet. Join the waitlist to get an email when it ships."
                     }
                 },
                 {
@@ -72,7 +72,7 @@ import Layout from "../layouts/Layout.astro";
                     "name": "When does it launch?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "There is no public date yet. We would rather ship than promise a date and slip it. The waitlist gets the first email when Iron Forge launches on iOS."
+                        "text": "There is no public date yet. I would rather ship than promise a date and slip it. The waitlist gets the first email when Iron Forge launches on iOS."
                     }
                 },
                 {
@@ -135,6 +135,7 @@ import Layout from "../layouts/Layout.astro";
 
             <!-- Waitlist Form - Kit Embed -->
             <div class="cta">
+                <p class="cta-intro" id="waitlist-intro">Iron Forge is coming to iPhone. Join the waitlist and be the first to know when it launches.</p>
                 <script is:inline src="https://f.convertkit.com/ckjs/ck.5.js"></script>
                 <form
                     action="https://app.kit.com/forms/8869648/subscriptions"
@@ -144,7 +145,7 @@ import Layout from "../layouts/Layout.astro";
                     data-uid="f1beae323b"
                     data-format="inline"
                     data-version="5"
-                    data-options='{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"https://ironforge.app/thanks/","success_message":"You are on the list. We will email you when Iron Forge launches on iOS."}}}'
+                    data-options='{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"https://ironforge.app/thanks/","success_message":"You are on the list. You will get an email when Iron Forge launches on iOS."}}}'
                 >
                     <div data-style="clean">
                         <ul
@@ -163,6 +164,7 @@ import Layout from "../layouts/Layout.astro";
                                     class="formkit-input"
                                     name="email_address"
                                     aria-label="Email Address"
+                                    aria-describedby="waitlist-intro waitlist-note"
                                     placeholder="you@example.com"
                                     required=""
                                     type="email"
@@ -180,7 +182,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                     </div>
                 </form>
-                <p class="form-note">Waitlist for launch. No spam, just launch updates.</p>
+                <p class="form-note" id="waitlist-note">No spam. Unsubscribe any time.</p>
             </div>
         </div>
     </section>
@@ -223,11 +225,11 @@ import Layout from "../layouts/Layout.astro";
             <dl class="qa">
                 <div class="item">
                     <dt>What is Iron Forge?</dt>
-                    <dd>Iron Forge is a workout tracker for iPhone, built by a lifter for serious lifters. It logs drop sets, supersets, myo-reps and giant sets exactly as you programme them. It has not launched yet. Join the waitlist and we will email you when it ships.</dd>
+                    <dd>Iron Forge is a workout tracker for iPhone, built by a lifter for serious lifters. It logs drop sets, supersets, myo-reps and giant sets exactly as you programme them. It has not launched yet. Join the waitlist to get an email when it ships.</dd>
                 </div>
                 <div class="item">
                     <dt>When does it launch?</dt>
-                    <dd>There is no public date yet. We would rather ship than promise a date and slip it. The waitlist gets the first email when Iron Forge launches on iOS.</dd>
+                    <dd>There is no public date yet. I would rather ship than promise a date and slip it. The waitlist gets the first email when Iron Forge launches on iOS.</dd>
                 </div>
                 <div class="item">
                     <dt>How much will it cost?</dt>
@@ -308,6 +310,8 @@ import Layout from "../layouts/Layout.astro";
 
     /* Waitlist (Kit form) */
     .cta{margin-top:46px;max-width:540px;}
+    /* Says what the form is for, at a size people actually read. */
+    .cta-intro{margin-bottom:16px;font-size:1.28rem;font-weight:600;line-height:1.4;letter-spacing:-0.01em;color:var(--text-primary);text-wrap:pretty;}
     .formkit-form{background:transparent;}
     /* .formkit-alert* live in global.css: Kit injects the success node at runtime,
        which Astro's component-scoped styles cannot reach. */
@@ -330,10 +334,7 @@ import Layout from "../layouts/Layout.astro";
     .formkit-submit:hover{background:var(--red-fill-hover);}
     .formkit-submit:active{background:var(--red-fill-active);}
     .formkit-submit:disabled{opacity:.7;cursor:not-allowed;}
-    .form-note{
-        margin-top:13px;font-family:"DM Mono",monospace;font-size:.84rem;
-        letter-spacing:.02em;color:var(--text-muted);
-    }
+    .form-note{margin-top:12px;font-size:1rem;line-height:1.55;color:var(--text-secondary);text-wrap:pretty;}
 
     /* Editorial two-column section */
     .section{

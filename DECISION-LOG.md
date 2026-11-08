@@ -3,6 +3,16 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-08 — Say what the waitlist is for, at a readable size
+
+A tester could not tell what the form was for, and the note under it (DM Mono .84rem,
+muted grey) was too small to notice. Added a short line above the form at the sub
+paragraph's size, semibold and white: "Iron Forge is coming to iPhone. Join the
+waitlist and be the first to know when it launches." (An earlier "Not out yet." read as
+negative.) The note below is now readable DM Sans: "No spam. Unsubscribe any time."
+Iron Forge is one person, so "we" is gone from the marketing copy (FAQ, thanks page,
+Kit message) and banned in `brand-voice.md`.
+
 ## 2026-11-08 — Red fills pass WCAG AA, in the brand hue
 
 Adopted the iOS app's red contrast rule (build of 8 Nov): white on any red fill must
