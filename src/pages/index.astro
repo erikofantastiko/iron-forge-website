@@ -135,6 +135,7 @@ import Layout from "../layouts/Layout.astro";
 
             <!-- Waitlist Form - Kit Embed -->
             <div class="cta">
+                <p class="cta-intro" id="waitlist-intro">Iron Forge is not out yet. Join the waitlist and we will email you when it launches on iPhone.</p>
                 <script is:inline src="https://f.convertkit.com/ckjs/ck.5.js"></script>
                 <form
                     action="https://app.kit.com/forms/8869648/subscriptions"
@@ -163,6 +164,7 @@ import Layout from "../layouts/Layout.astro";
                                     class="formkit-input"
                                     name="email_address"
                                     aria-label="Email Address"
+                                    aria-describedby="waitlist-intro"
                                     placeholder="you@example.com"
                                     required=""
                                     type="email"
@@ -180,7 +182,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                     </div>
                 </form>
-                <p class="form-note">Waitlist for launch. No spam, just launch updates.</p>
+                <p class="form-note">No spam, just launch updates. Unsubscribe any time.</p>
             </div>
         </div>
     </section>
@@ -308,6 +310,8 @@ import Layout from "../layouts/Layout.astro";
 
     /* Waitlist (Kit form) */
     .cta{margin-top:46px;max-width:540px;}
+    /* Says what the form is for, at a size people actually read. */
+    .cta-intro{margin-bottom:16px;font-size:1.12rem;font-weight:500;line-height:1.5;color:var(--text-primary);text-wrap:pretty;}
     .formkit-form{background:transparent;}
     /* .formkit-alert* live in global.css: Kit injects the success node at runtime,
        which Astro's component-scoped styles cannot reach. */
@@ -330,10 +334,7 @@ import Layout from "../layouts/Layout.astro";
     }
     .formkit-submit:hover{background:var(--red-deep);}
     .formkit-submit:disabled{opacity:.7;cursor:not-allowed;}
-    .form-note{
-        margin-top:13px;font-family:"DM Mono",monospace;font-size:.84rem;
-        letter-spacing:.02em;color:var(--text-muted);
-    }
+    .form-note{margin-top:12px;font-size:.98rem;line-height:1.5;color:var(--text-secondary);text-wrap:pretty;}
 
     /* Editorial two-column section */
     .section{

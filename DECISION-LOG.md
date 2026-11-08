@@ -3,6 +3,14 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-08 — Say what the waitlist is for, at a readable size
+
+A tester could not tell what the form was for, and the note under it (DM Mono .84rem,
+muted grey) was too small to notice. Added a short line above the form at body size:
+"Iron Forge is not out yet. Join the waitlist and we will email you when it launches
+on iPhone." The note below is now DM Sans at about 1rem in secondary grey: "No spam,
+just launch updates. Unsubscribe any time."
+
 ## 2026-10-11 — Clean up "Page with redirect" in Search Console, index legal pages
 
 Search Console listed URLs under "Page with redirect". The deploy passed the GitHub
