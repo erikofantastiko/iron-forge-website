@@ -3,6 +3,18 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-08 — Red fills pass WCAG AA, in the brand hue
+
+Adopted the iOS app's red contrast rule (build of 8 Nov): white on any red fill must
+reach 4.5:1. White on `#e63946` was only 4.17:1. Every red surface with white text now
+uses new fill tokens in the brand hue, only darker: `--red-fill: #d92b3d` (4.81:1),
+hover `#cd1b35` (5.52:1), pressed `#be002a` (6.52:1). That covers the waitlist button
+and the email buttons, badge and step numbers. We checked the app's own fill
+`#e31414` first and rejected it: it is more orange and more saturated, and it clashed
+with the logo and red text in a side-by-side render, worst in the launch email.
+`--red` stays `#e63946` for red text, icons, the thanks checkmark (a white icon only
+needs 3:1), the logo, favicon and social card. Removed the now unused `--red-deep`.
+
 ## 2026-10-11 — Clean up "Page with redirect" in Search Console, index legal pages
 
 Search Console listed URLs under "Page with redirect". The deploy passed the GitHub
