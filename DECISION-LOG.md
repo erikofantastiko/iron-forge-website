@@ -7,7 +7,7 @@ dated entry: what changed and why, in a sentence or two. Newest at the top.
 
 A tester could not tell what the form was for, and the note under it (DM Mono .84rem,
 muted grey) was too small to notice. Added a short line above the form at the sub
-paragraph's size, semibold, with the first words in red: "Not out yet. Join the
+paragraph's size, semibold and white: "Not out yet. Join the
 waitlist to hear when Iron Forge launches on iPhone." The note below is now readable
 DM Sans: "No spam. Unsubscribe any time." Iron Forge is one person, so "we" is gone
 from the marketing copy (FAQ, thanks page, Kit message) and banned in `brand-voice.md`.

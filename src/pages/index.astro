@@ -135,7 +135,7 @@ import Layout from "../layouts/Layout.astro";
 
             <!-- Waitlist Form - Kit Embed -->
             <div class="cta">
-                <p class="cta-intro" id="waitlist-intro"><span class="flag">Not out yet.</span> Join the waitlist to hear when Iron Forge launches on iPhone.</p>
+                <p class="cta-intro" id="waitlist-intro">Not out yet. Join the waitlist to hear when Iron Forge launches on iPhone.</p>
                 <script is:inline src="https://f.convertkit.com/ckjs/ck.5.js"></script>
                 <form
                     action="https://app.kit.com/forms/8869648/subscriptions"
@@ -311,8 +311,7 @@ import Layout from "../layouts/Layout.astro";
     /* Waitlist (Kit form) */
     .cta{margin-top:46px;max-width:540px;}
     /* Says what the form is for, at a size people actually read. */
-    .cta-intro{margin-bottom:18px;font-size:1.28rem;font-weight:600;line-height:1.4;letter-spacing:-0.01em;color:var(--text-primary);text-wrap:pretty;}
-    .cta-intro .flag{color:var(--red);}
+    .cta-intro{margin-bottom:16px;font-size:1.28rem;font-weight:600;line-height:1.4;letter-spacing:-0.01em;color:var(--text-primary);text-wrap:pretty;}
     .formkit-form{background:transparent;}
     /* .formkit-alert* live in global.css: Kit injects the success node at runtime,
        which Astro's component-scoped styles cannot reach. */
