@@ -3,6 +3,14 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-08 — Explain 1RM on the thanks page
+
+The thanks page listed "Estimated 1RM" without saying what it means. Checked the app
+first: it shows an Est. 1RM tile and chart per exercise, plus weight and volume charts
+and personal records, so the claim is true. The line now reads "Estimated one-rep max
+(the most you could lift once)". Added 1RM to the glossary and the per-exercise
+progress facts to `website-content.md`.
+
 ## 2026-11-08 — Say what the waitlist is for, at a readable size
 
 A tester could not tell what the form was for, and the note under it (DM Mono .84rem,

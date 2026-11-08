@@ -38,6 +38,7 @@ no-hype, no-fluff spine. Just make it welcoming and clear instead of terse.
 - **RPE (rate of perceived exertion)**: how hard a set felt, on a simple scale.
 - **Progressive overload**: adding a little weight or reps over time so you keep making progress.
 - **Readiness**: a daily score for how recovered you are, built from your health data.
+- **1RM (one-rep max)**: the most you could lift once. The app estimates it from your sets.
 
 ## Load-bearing facts
 
@@ -50,6 +51,9 @@ Copy must stay true to these. If a claim conflicts with the product, the claim i
   Clusters and AMRAP do not exist in the app. Never mention them.
 - **Recovery** is "evidence-aligned", never "science-backed". It uses HRV, sleep and
   resting heart rate from Apple Health, scored into a daily readiness number.
+- **Progress per exercise**: an estimated 1RM, max weight and volume, each as a chart
+  over time, plus personal records for weight, estimated 1RM and volume. The estimate
+  is the mean of published formulas (Epley, Brzycki and others). Name them, never count them.
 - **Progression** is "suggestions plus plateau detection", never "automatic". The app
   suggests when to add weight and when to hold back. It does not progress your lifts
   for you. Phrasing like "it suggests, it does not decide" is on-brand.
