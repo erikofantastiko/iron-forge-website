@@ -3,7 +3,13 @@
     /* Brand */
     --red: #e63946;
     --red-hover: #f04a56;
-    --red-deep: #d12b38;
+    /* Red fills under white text: the brand hue, only darker. White on --red is
+       4.17:1, so fills use these: 4.81, 5.52, 6.52:1 (the app's AA rule).
+       --red stays for red text, links and icons on dark surfaces (4.75:1).
+       Fills darken on hover, red text lightens (--red-hover): both on purpose. */
+    --red-fill: #d92b3d;
+    --red-fill-hover: #cd1b35;
+    --red-fill-active: #be002a;
     --red-glow: rgba(230, 57, 70, 0.35);
     --red-soft: rgba(230, 57, 70, 0.12);
 
