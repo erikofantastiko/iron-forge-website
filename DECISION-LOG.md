@@ -8,8 +8,9 @@ dated entry: what changed and why, in a sentence or two. Newest at the top.
 A tester could not tell what the form was for, and the note under it (DM Mono .84rem,
 muted grey) was too small to notice. Added a short line above the form at body size:
 "Iron Forge is not out yet. Join the waitlist and we will email you when it launches
-on iPhone." The note below is now DM Sans at about 1rem in secondary grey: "No spam,
-just launch updates. Unsubscribe any time."
+on iPhone." The note below is now DM Sans at about 1rem in secondary grey: "No spam.
+Only launch news and occasional updates. Unsubscribe any time." That matches the
+privacy page, which also allows occasional development updates.
 
 ## 2026-10-11 — Clean up "Page with redirect" in Search Console, index legal pages
 
