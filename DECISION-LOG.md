@@ -7,7 +7,7 @@ dated entry: what changed and why, in a sentence or two. Newest at the top.
 
 On a phone the section labels (DM Mono .82rem, grey) were tiny next to the text under
 them, and smaller than the red spec labels inside "What it does". They are now DM Sans
-headings at 1.5rem (1.6rem on mobile). The "Why" lead drops to 1.4rem on mobile. The
+headings at 1.5rem (1.6rem on mobile). The "Why" lead drops to 1.3rem on mobile. The
 owner wanted the difference from Strong and Hevy to be easier to find, so a new first
 section, "Outgrown Strong or Hevy?", lists three things Iron Forge does: advanced sets,
 progress (estimated 1RM, plateau detection) and recovery. It describes Iron Forge only,
