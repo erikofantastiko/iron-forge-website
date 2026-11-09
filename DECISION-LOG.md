@@ -3,6 +3,16 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-09 — Analysis and plateau detection as the lead selling points
+
+The owner wants the analysis to sell the app, not only recovery. Checked the app's
+Analytics tab first (FAQ.tsx, ProgressAndRecordsView, PerformanceDropCard). The
+"Outgrown Strong or Hevy?" section now opens with "It logs your training, then shows you
+what is working." and leads with analysis, then next weight plus plateau help, then
+advanced sets, then recovery. The spec sheet gains an Analysis row, the Progression row
+mentions the plateau plan, and Recovery moves below them. Analysis facts are recorded in
+`website-content.md`.
+
 ## 2026-11-09 — Real section headings, and a Strong/Hevy section near the top
 
 On a phone the section labels (DM Mono .82rem, grey) were tiny next to the text under

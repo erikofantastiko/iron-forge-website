@@ -54,6 +54,15 @@ Copy must stay true to these. If a claim conflicts with the product, the claim i
 - **Progress per exercise**: an estimated 1RM, max weight and volume, each as a chart
   over time, plus personal records for weight, estimated 1RM and volume. The estimate
   is the mean of published formulas (Epley, Brzycki and others). Name them, never count them.
+- **Analysis** (the app's Analytics tab): Overview (next weight and reps per lift,
+  recovery readiness, recent PRs); Balance (weekly volume by muscle group, push:pull
+  ratio, performance drop); Progress (the per-exercise charts above, plateau help, effort
+  (RPE), personal records).
+- **Plateau detection**: per exercise, after at least six logged sessions, when top
+  weight and work-set volume barely moved and the latest session did not beat the one
+  before. The plan depends on effort: high effort, ease off the load (deload); low
+  effort, train closer to failure or change the rep range. It is "a cue to look closer,
+  not a verdict".
 - **Progression** is "suggestions plus plateau detection", never "automatic". The app
   suggests when to add weight and when to hold back. It does not progress your lifts
   for you. Phrasing like "it suggests, it does not decide" is on-brand.
