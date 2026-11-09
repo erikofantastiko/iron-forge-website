@@ -3,6 +3,13 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-09 — Kettlebell favicon instead of "IF"
+
+The browser tab showed `favicon.svg`, a red square with the letters "IF". It now shows
+the kettlebell: `favicon.ico` (16, 32, 48) and `favicon-192.png`, cut from `Logo.png` on
+a transparent background. `apple-touch-icon.png` (180) is the iOS app icon, so a
+home-screen shortcut looks like the app. Removed `favicon.svg`.
+
 ## 2026-11-09 — FAQ as closed accordions
 
 To keep the homepage short, the six FAQ answers now sit in native `<details>` elements,
