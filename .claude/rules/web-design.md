@@ -40,7 +40,9 @@ the logo and red text next to it. Keep fills on the brand hue. Do not swap in th
   so keep red text on cards to large text (bold 18.67px+) or icons.
 - A white icon with no text on a red fill (the thanks checkmark) only needs 3:1, so it
   may stay on `--red`.
-- `Logo.png`, the favicons and `og.png` keep `#e63946`. Logos are exempt from WCAG
+- `Logo.png`, the favicons and `og.png` keep their own baked-in red. Note that the
+  kettlebell in `Logo.png` (and so in the favicons) samples as `#c42221`, a little
+  darker than `--red`; that is the logo artwork, leave it. Logos are exempt from WCAG
   text contrast.
 
 ### Favicons
