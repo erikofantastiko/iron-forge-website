@@ -3,6 +3,15 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-09 — FAQ as closed accordions
+
+To keep the homepage short, the six FAQ answers now sit in native `<details>` elements,
+closed by default, with a quiet "+" (silent for screen readers) that turns into a cross
+when open. Rows keep the page rhythm (24px, 22px on mobile). No JavaScript.
+The answers stay in the HTML and in the FAQPage JSON-LD, so search engines still read
+them. Added `summary` to the global focus outline. On a 390px phone the page is about
+800px shorter.
+
 ## 2026-11-09 — Analysis and plateau detection as the lead selling points, kept short
 
 The owner wants the analysis to sell the app, not only recovery, and the homepage to
