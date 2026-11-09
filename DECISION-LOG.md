@@ -9,7 +9,7 @@ The owner wants the analysis to sell the app, not only recovery, and the homepag
 stay short and catchy. Checked the app's Analytics tab first (FAQ.tsx,
 ProgressAndRecordsView, VolumeAnalysisService). The "Outgrown Strong or Hevy?" section
 now reads "Log every set. See what is working." with four one-line points: charts for
-every lift, "Stalled? It notices.", advanced sets, recovery at a glance. The spec sheet
+every lift, "Stalled? Iron Forge notices.", advanced sets, recovery at a glance. The spec sheet
 drops the rows that repeated it and keeps one short line per set type, progression, RPE
 and the library. Visible words from hero to footer: 573 before, 502 after. Analysis
 facts are recorded in `website-content.md`.
