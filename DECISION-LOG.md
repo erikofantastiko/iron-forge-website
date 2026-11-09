@@ -3,6 +3,17 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-09 — Analysis and plateau detection as the lead selling points, kept short
+
+The owner wants the analysis to sell the app, not only recovery, and the homepage to
+stay short and catchy. Checked the app's Analytics tab first (FAQ.tsx,
+ProgressAndRecordsView, VolumeAnalysisService). The "Outgrown Strong or Hevy?" section
+now reads "Log every set. See what is working." with four one-line points: charts for
+every lift, "Stalled? Iron Forge notices.", advanced sets, recovery at a glance. The spec sheet
+drops the rows that repeated it and keeps one short line per set type, progression, RPE
+and the library. Visible words from hero to footer: 573 before, 502 after. Analysis
+facts are recorded in `website-content.md`.
+
 ## 2026-11-09 — Real section headings, and a Strong/Hevy section near the top
 
 On a phone the section labels (DM Mono .82rem, grey) were tiny next to the text under
