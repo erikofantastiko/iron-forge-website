@@ -3,6 +3,13 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-09 — Hero: no eyebrow, headline uses the full width
+
+Removed the "Workout tracking · iOS" eyebrow above the headline: it did nothing, and
+the header already says "Pre-launch · iOS". Dropped the h1's `max-width:16ch` and added
+`text-wrap:balance`, so on wide screens each sentence sits on one line. Phones still
+wrap. The `.eyebrow` class is gone, as nothing uses it now.
+
 ## 2026-11-09 — Kettlebell favicon instead of "IF"
 
 The browser tab showed `favicon.svg`, a red square with the letters "IF". It now shows
