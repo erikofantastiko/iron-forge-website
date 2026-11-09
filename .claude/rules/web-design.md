@@ -40,8 +40,15 @@ the logo and red text next to it. Keep fills on the brand hue. Do not swap in th
   so keep red text on cards to large text (bold 18.67px+) or icons.
 - A white icon with no text on a red fill (the thanks checkmark) only needs 3:1, so it
   may stay on `--red`.
-- `logo.png`, `favicon.svg` and `og.png` keep `#e63946`. Logos are exempt from WCAG
+- `Logo.png`, the favicons and `og.png` keep `#e63946`. Logos are exempt from WCAG
   text contrast.
+
+### Favicons
+
+The browser tab shows the kettlebell, never the old "IF" letters. `favicon.ico` (16, 32,
+48) and `favicon-192.png` are cut from `Logo.png` on a transparent background.
+`apple-touch-icon.png` (180) is the iOS app icon, so a home-screen shortcut matches the
+app. Regenerate them from those two sources, not by hand.
 
 ### Type
 
