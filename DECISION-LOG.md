@@ -10,6 +10,15 @@ the kettlebell: `favicon.ico` (16, 32, 48) and `favicon-192.png`, cut from `Logo
 a transparent background. `apple-touch-icon.png` (180) is the iOS app icon, so a
 home-screen shortcut looks like the app. Removed `favicon.svg`.
 
+## 2026-11-09 — FAQ as closed accordions
+
+To keep the homepage short, the six FAQ answers now sit in native `<details>` elements,
+closed by default, with a quiet "+" (silent for screen readers) that turns into a cross
+when open. Rows keep the page rhythm (24px, 22px on mobile). No JavaScript.
+The answers stay in the HTML and in the FAQPage JSON-LD, so search engines still read
+them. Added `summary` to the global focus outline. On a 390px phone the page is about
+800px shorter.
+
 ## 2026-11-09 — Analysis and plateau detection as the lead selling points, kept short
 
 The owner wants the analysis to sell the app, not only recovery, and the homepage to
