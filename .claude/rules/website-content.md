@@ -69,7 +69,9 @@ Do not write these until they are actually true. They are false or unsafe today.
   automatically" line.
 - **No competitor comparison table anywhere.** It is legally exposed, and the internal
   numbers are not publication-grade. Naming Strong or Hevy in prose on our own site is
-  fine. A side-by-side table is not.
+  fine. A side-by-side table is not. The sanctioned line (from the app's brand rules) is
+  "For lifters who have outgrown Strong and Hevy". Never state what Strong or Hevy cannot
+  do. Show the difference through what Iron Forge does.
 - **No launch date and no countdown.** A slipped date is exactly the broken promise the
   brand stands against. Before launch, the only commercial surface is the waitlist.
 
