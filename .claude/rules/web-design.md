@@ -104,7 +104,13 @@ edges toward the tokens when you touch nearby code:
 
 - Keep radii on the `--radius-sm/md/lg` tokens. No stray `8px`.
 - Keep the single `760px` mobile breakpoint. Do not add a second one.
-- A few raw `rgba()` literals remain: the privacy data-table borders and the ambient
-  background tints in `global.css`. Prefer the surface and border tokens where one fits.
+- A few raw `rgba()` literals remain: the ambient background tints in `global.css`.
+  Prefer the surface and border tokens where one fits.
+- The logo lockup is one size everywhere: a 34px mark and a 1.05rem wordmark (`.logo` in
+  `global.css`, `.brand` on the home and 404 pages). Do not add a third size.
+- Page headings share one style: weight 600 with negative letter-spacing, sentence case.
+  No bold all-caps headings with wide tracking.
+- The privacy policy body is generated markup with inline styles and headings nested in
+  spans. The page CSS overrides its colours and sizes. Do not hand-edit the nesting.
 - Spacing is still ad-hoc with no scale. Keep new spacing on the existing rhythm rather
   than inventing new values.

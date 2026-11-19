@@ -3,6 +3,29 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-19 — Frontend audit fixes
+
+Fixed the findings of a full design and accessibility audit. Home page: the waitlist field
+shows the red keyboard focus ring again (a scoped `outline:none` had hidden it), the Kit
+script loads with `defer` so it no longer blocks the page, the header stays on one line
+down to 320px, the join button fills the row when it wraps, and the spec sheet is a real
+`<dl>`. Layout: header and footer now sit outside `<main>` (named slots), every page with
+a canonical URL also gets `og:url`, and the site declares `color-scheme: dark`. Legal,
+privacy and thanks: headings match the home page (weight 600, tight tracking, sentence
+case), one logo size everywhere, a narrower 760px text column and 22px mobile padding.
+Privacy policy: generated grey and black inline colours are overridden so all text passes
+AA, body text is 16px, links are red, the data table uses tokens, has column scopes and
+scrolls inside its own box. Thanks page: the list no longer splits each line into two
+columns. Left alone on purpose: the generated policy still nests headings inside spans.
+Rewriting 5,000 lines of generated markup by hand is riskier than the flaw.
+
+## 2026-11-19 — Contact addresses moved to the ironforge.app domain
+
+Replaced the old Gmail contact address on the public pages. The legal notice now shows
+`support@ironforge.app` and the privacy policy uses `privacy@ironforge.app` for every
+privacy, access and deletion contact. Nothing else changed. The waitlist form posts to
+Kit, so its sender and reply address are set in the Kit account, not in this repo.
+
 ## 2026-11-09 — Hero: no eyebrow, headline uses the full width
 
 Removed the "Workout tracking · iOS" eyebrow above the headline: it did nothing, and

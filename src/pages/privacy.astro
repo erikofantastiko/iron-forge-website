@@ -10,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
     <style>
         /* Page container */
         .container {
-            max-width: 900px;
+            max-width: 760px;
             margin: 0 auto;
             padding: 60px 40px;
             line-height: 1.7;
@@ -18,50 +18,38 @@ import Layout from "../layouts/Layout.astro";
 
         @media (max-width: 760px) {
             .container {
-                padding: 40px 24px;
+                padding: 40px 22px;
             }
         }
 
         /* Logo */
+        /* Size and wordmark come from the shared .logo in global.css. */
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
             margin-bottom: 48px;
-            text-decoration: none;
-            color: var(--text-primary);
             width: fit-content;
-        }
-
-        .logo img {
-            width: 32px;
-            height: auto;
-        }
-
-        .logo span {
-            font-family: "DM Sans", sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 0.1em;
+            color: var(--text-primary);
+            text-decoration: none;
         }
 
         /* Typography */
         h1 {
             font-family: "DM Sans", sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 2.5rem;
+            line-height: 1.1;
             margin-bottom: 0.5rem;
-            letter-spacing: 0.05em;
+            letter-spacing: -0.03em;
             color: var(--text-primary);
         }
 
         h2 {
             font-family: "DM Sans", sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 1.5rem;
+            line-height: 1.2;
             margin-top: 2.5rem;
             margin-bottom: 1rem;
-            letter-spacing: 0.05em;
+            letter-spacing: -0.015em;
             color: var(--text-primary);
         }
 
@@ -126,6 +114,16 @@ import Layout from "../layouts/Layout.astro";
         }
 
         /* Termly Specific Overrides */
+        /* The generator bakes grey and black text colours into inline styles, built
+           for a white page. Reset every element to the secondary text shade first.
+           :where() keeps this at zero specificity, so the heading, title and link
+           rules below win, but only because they are !important too. A new rule
+           inside .termly-container needs !important as well. */
+        :where(.termly-container *:not(a, h2, h3)) {
+            color: var(--text-secondary) !important;
+            font-size: 1rem !important;
+        }
+
         [data-custom-class="body"],
         [data-custom-class="body"] * {
             background: transparent !important;
@@ -142,7 +140,7 @@ import Layout from "../layouts/Layout.astro";
         [data-custom-class="subtitle"] * {
             font-family: inherit !important;
             color: var(--text-secondary) !important;
-            font-size: 14px !important;
+            font-size: 1rem !important;
         }
 
         [data-custom-class="heading_1"],
@@ -162,7 +160,7 @@ import Layout from "../layouts/Layout.astro";
         [data-custom-class="body_text"],
         [data-custom-class="body_text"] * {
             color: var(--text-secondary) !important;
-            font-size: 14px !important;
+            font-size: 1rem !important;
             font-family: inherit !important;
             line-height: 1.7 !important;
         }
@@ -170,12 +168,30 @@ import Layout from "../layouts/Layout.astro";
         [data-custom-class="link"],
         [data-custom-class="link"] * {
             color: var(--red) !important;
-            font-size: 14px !important;
+            font-size: 1rem !important;
             font-family: inherit !important;
             word-break: break-word !important;
         }
 
+        /* Links inside body text: the body_text rule above is more specific than the
+           link rule, which left these links grey. Keep every policy link red. */
+        .termly-container a,
+        .termly-container a * {
+            color: var(--red) !important;
+        }
+
         /* Table styling for dark theme */
+        /* Wide tables scroll inside this box instead of widening the page. */
+        .table-scroll {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        .table-scroll table {
+            margin: 0;
+            min-width: 520px;
+        }
+
         table,
         .privacy-table {
             border-collapse: collapse;
@@ -187,7 +203,7 @@ import Layout from "../layouts/Layout.astro";
         table td,
         .privacy-table th,
         .privacy-table td {
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid var(--surface-border-strong) !important;
             padding: 12px 16px !important;
             text-align: left;
             vertical-align: top;
@@ -195,7 +211,7 @@ import Layout from "../layouts/Layout.astro";
 
         table th,
         .privacy-table th {
-            background: rgba(255, 255, 255, 0.08);
+            background: var(--surface-2);
             color: var(--text-primary) !important;
             font-weight: 600;
         }
@@ -207,7 +223,7 @@ import Layout from "../layouts/Layout.astro";
 
         table tr:hover td,
         .privacy-table tr:hover td {
-            background: rgba(255, 255, 255, 0.02);
+            background: var(--surface-1);
         }
 
         /* Ensure table text is readable */
@@ -267,7 +283,7 @@ import Layout from "../layouts/Layout.astro";
             <a href="/" class="logo">
                 <picture>
                     <source srcset="/Logo-144.webp" type="image/webp" />
-                    <img src="/Logo-144.png" alt="Iron Forge Logo" width="32" height="32" />
+                    <img src="/Logo-144.png" alt="" width="34" height="34" />
                 </picture>
                 <span>IRON FORGE</span>
             </a>
@@ -323,8 +339,8 @@ import Layout from "../layouts/Layout.astro";
             <h2>5. Contact Us</h2>
             <p>
                 If you have any questions, please contact us at: <a
-                    href="mailto:ironforge.labs@gmail.com"
-                    >ironforge.labs@gmail.com</a
+                    href="mailto:privacy@ironforge.app"
+                    >privacy@ironforge.app</a
                 >
             </p>
 
@@ -603,8 +619,8 @@ import Layout from "../layouts/Layout.astro";
                                             ><a
                                                 target="_blank"
                                                 data-custom-class="link"
-                                                href="mailto:ironforge.labs@gmail.com"
-                                                >ironforge.labs@gmail.com</a
+                                                href="mailto:privacy@ironforge.app"
+                                                >privacy@ironforge.app</a
                                             ></bdt
                                         >.</span
                                     ></span
@@ -848,8 +864,8 @@ import Layout from "../layouts/Layout.astro";
                                             ><a
                                                 target="_blank"
                                                 data-custom-class="link"
-                                                href="mailto:ironforge.labs@gmail.com"
-                                                >ironforge.labs@gmail.com</a
+                                                href="mailto:privacy@ironforge.app"
+                                                >privacy@ironforge.app</a
                                             ></bdt
                                         ></span
                                     ><bdt class="else-block"></bdt>, or by
@@ -3356,8 +3372,8 @@ import Layout from "../layouts/Layout.astro";
                                                     ><a
                                                         target="_blank"
                                                         data-custom-class="link"
-                                                        href="mailto:ironforge.labs@gmail.com"
-                                                        >ironforge.labs@gmail.com</a
+                                                        href="mailto:privacy@ironforge.app"
+                                                        >privacy@ironforge.app</a
                                                     ></bdt
                                                 ><bdt class="else-block"
                                                 ></bdt></span
@@ -3723,8 +3739,8 @@ import Layout from "../layouts/Layout.astro";
                                     ><a
                                         target="_blank"
                                         data-custom-class="link"
-                                        href="mailto:ironforge.labs@gmail.com"
-                                        >ironforge.labs@gmail.com</a
+                                        href="mailto:privacy@ironforge.app"
+                                        >privacy@ironforge.app</a
                                     ></bdt
                                 >.</span
                             ></span
@@ -3907,12 +3923,13 @@ import Layout from "../layouts/Layout.astro";
                         >
                     </div>
                     <div style="line-height: 1.5;"><br /></div>
+                    <div class="table-scroll" tabindex="0" role="region" aria-label="Categories of personal information">
                     <table class="privacy-table">
                         <thead>
                             <tr>
-                                <th><span data-custom-class="body_text"><strong>Category</strong></span></th>
-                                <th><span data-custom-class="body_text"><strong>Examples</strong></span></th>
-                                <th><span data-custom-class="body_text"><strong>Collected</strong></span></th>
+                                <th scope="col"><span data-custom-class="body_text"><strong>Category</strong></span></th>
+                                <th scope="col"><span data-custom-class="body_text"><strong>Examples</strong></span></th>
+                                <th scope="col"><span data-custom-class="body_text"><strong>Collected</strong></span></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -3978,6 +3995,7 @@ import Layout from "../layouts/Layout.astro";
                             </tr>
                         </tbody>
                     </table>
+                    </div>
                     <div style="line-height: 1.5;"><br /></div>
                     <div
                         style="line-height: 1.5;"
@@ -4765,8 +4783,8 @@ import Layout from "../layouts/Layout.astro";
                                             ><a
                                                 target="_blank"
                                                 data-custom-class="link"
-                                                href="mailto:ironforge.labs@gmail.com"
-                                                >ironforge.labs@gmail.com</a
+                                                href="mailto:privacy@ironforge.app"
+                                                >privacy@ironforge.app</a
                                             ></bdt
                                         ></span
                                     >, <bdt class="else-block"></bdt></span
@@ -4782,8 +4800,8 @@ import Layout from "../layouts/Layout.astro";
                                                     ><a
                                                         target="_blank"
                                                         data-custom-class="link"
-                                                        href="mailto:ironforge.labs@gmail.com"
-                                                        >ironforge.labs@gmail.com</a
+                                                        href="mailto:privacy@ironforge.app"
+                                                        >privacy@ironforge.app</a
                                                     ></bdt
                                                 >, <bdt
                                                     class="statement-end-if-in-editor"
@@ -4866,7 +4884,7 @@ import Layout from "../layouts/Layout.astro";
                             ><span style="font-size: 15px;"></span></bdt
                         ><span style="font-size: 15px;"
                             ><span data-custom-class="heading_2"
-                                ><strong><h3>Appeals</h3></strong></span
+                                ><h3>Appeals</h3></span
                             ><span data-custom-class="body_text"
                                 >Under certain US state data protection laws, if
                                 we decline to take action regarding your
@@ -4876,8 +4894,8 @@ import Layout from "../layouts/Layout.astro";
                                     ><a
                                         target="_blank"
                                         data-custom-class="link"
-                                        href="mailto:ironforge.labs@gmail.com"
-                                        >ironforge.labs@gmail.com</a
+                                        href="mailto:privacy@ironforge.app"
+                                        >privacy@ironforge.app</a
                                     ></bdt
                                 ><bdt class="else-block"></bdt>. We will inform
                                 you in writing of any action taken or not taken
@@ -5120,8 +5138,8 @@ import Layout from "../layouts/Layout.astro";
                                                 ><a
                                                     target="_blank"
                                                     data-custom-class="link"
-                                                    href="mailto:ironforge.labs@gmail.com"
-                                                    >ironforge.labs@gmail.com</a
+                                                    href="mailto:privacy@ironforge.app"
+                                                    >privacy@ironforge.app</a
                                                 > or
                                             </bdt><bdt
                                                 class="statement-end-if-in-editor"
@@ -5459,8 +5477,8 @@ import Layout from "../layouts/Layout.astro";
                                                                                     ><a
                                                                                         target="_blank"
                                                                                         data-custom-class="link"
-                                                                                        href="mailto:ironforge.labs@gmail.com"
-                                                                                        >ironforge.labs@gmail.com</a
+                                                                                        href="mailto:privacy@ironforge.app"
+                                                                                        >privacy@ironforge.app</a
                                                                                     ></bdt
                                                                                 ></span
                                                                             ><bdt
