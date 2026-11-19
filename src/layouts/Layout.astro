@@ -3,6 +3,8 @@ interface Props {
     title: string;
     description?: string;
     noIndex?: boolean;
+    /** Full robots value for this page. Overrides noIndex when set. */
+    robots?: string;
     canonicalUrl?: string;
     ogImage?: string;
 }
@@ -11,6 +13,7 @@ const {
     title,
     description = "Workout tracking for serious lifters. Log drop sets, supersets, myo-reps and giant sets exactly as you programme them. No AI coaching. No ads, ever.",
     noIndex = false,
+    robots,
     canonicalUrl,
     ogImage = "https://ironforge.app/og.png"
 } = Astro.props;
@@ -27,7 +30,7 @@ const {
 
         <!-- SEO Meta Tags -->
         <meta name="description" content={description} />
-        {noIndex && <meta name="robots" content="noindex, nofollow" />}
+        {robots ? <meta name="robots" content={robots} /> : noIndex && <meta name="robots" content="noindex, nofollow" />}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
         <!-- Open Graph -->

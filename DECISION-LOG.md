@@ -3,6 +3,13 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-19 — Thanks page: noindex, follow
+
+The thanks page now sends `noindex, follow` instead of `noindex, nofollow`: it stays out
+of Google, but crawlers may still follow its links. The layout gained an optional `robots`
+prop for this, so the 404 page keeps its `noindex, nofollow`. The sitemap already left out
+/thanks and robots.txt blocks nothing, so neither changed.
+
 ## 2026-11-19 — Frontend audit fixes
 
 Fixed the findings of a full design and accessibility audit. Home page: the waitlist field
