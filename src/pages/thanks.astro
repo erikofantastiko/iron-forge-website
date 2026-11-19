@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-    title="You're in - Iron Forge"
+    title="You're in · Iron Forge"
     description="You are on the Iron Forge waitlist. You will get an email when Iron Forge launches on iOS."
     noIndex={true}
 >
@@ -12,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="logo">
             <picture>
                 <source srcset="/Logo-144.webp" type="image/webp">
-                <img src="/Logo-144.png" alt="Iron Forge Logo" width="44" height="44">
+                <img src="/Logo-144.png" alt="" width="34" height="34">
             </picture>
             <span>IRON FORGE</span>
         </div>
@@ -26,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Hero -->
         <div class="hero">
-            <h1>YOU'RE <span class="red">IN.</span></h1>
+            <h1>You're <span class="red">in.</span></h1>
             <p>
                 You're on the Iron Forge waitlist. You'll be the first to know when it launches on iOS.
             </p>
@@ -34,7 +34,7 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- What You'll Get -->
         <div class="next-steps">
-            <h2>WHAT YOU'LL GET</h2>
+            <h2>What you'll get</h2>
             <ul>
                 <li><strong>Drop sets, supersets, myo-reps and giant sets.</strong> Logged as structures, not workarounds.</li>
                 <li><strong>Trends for your estimated one-rep max (the most you could lift once), weight and volume</strong> per exercise, with personal records.</li>
@@ -45,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- What's Next -->
         <div class="next-steps whats-next">
-            <h2>WHAT'S NEXT</h2>
+            <h2>What's next</h2>
             <ul>
                 <li>Keep an eye on your inbox for launch updates</li>
                 <li>Follow Iron Forge on Instagram for behind-the-scenes content</li>
@@ -55,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Social CTAs -->
         <div class="social-ctas">
-            <a href="https://www.instagram.com/ironforge.app/" target="_blank" rel="noopener" class="instagram-cta">
+            <a href="https://www.instagram.com/ironforge.app/" target="_blank" rel="noopener noreferrer" class="instagram-cta">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
@@ -130,10 +130,10 @@ import Layout from "../layouts/Layout.astro";
     /* Hero */
     .hero h1 {
         font-family: "DM Sans", sans-serif;
-        font-weight: 700;
+        font-weight: 600;
         font-size: clamp(2.5rem, 8vw, 4rem);
-        line-height: 1.1;
-        letter-spacing: 0.04em;
+        line-height: 1.05;
+        letter-spacing: -0.035em;
         margin-bottom: 24px;
         opacity: 0;
         animation: slideUp 0.8s ease forwards 0.4s;
@@ -172,9 +172,10 @@ import Layout from "../layouts/Layout.astro";
 
     .next-steps h2 {
         font-family: "DM Sans", sans-serif;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 1.5rem;
-        letter-spacing: 0.05em;
+        line-height: 1.2;
+        letter-spacing: -0.015em;
         margin-bottom: 20px;
         color: var(--red);
     }
@@ -185,10 +186,10 @@ import Layout from "../layouts/Layout.astro";
         margin: 0;
     }
 
+    /* Not flex: a flex row would split the bold lead and the rest into two columns. */
     .next-steps li {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
+        position: relative;
+        padding-left: 26px;
         margin-bottom: 16px;
         color: var(--text-secondary);
         font-size: 0.95rem;
@@ -201,9 +202,10 @@ import Layout from "../layouts/Layout.astro";
 
     .next-steps li::before {
         content: '→';
+        position: absolute;
+        left: 0;
         color: var(--red);
         font-weight: 500;
-        flex-shrink: 0;
     }
 
     .next-steps li strong {
@@ -276,7 +278,7 @@ import Layout from "../layouts/Layout.astro";
     /* Mobile */
     @media (max-width: 760px) {
         .container {
-            padding: 40px 20px;
+            padding: 40px 22px;
         }
 
         .next-steps {

@@ -22,6 +22,7 @@ const {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#0a0a0a" />
+        <meta name="color-scheme" content="dark" />
         <title>{title}</title>
 
         <!-- SEO Meta Tags -->
@@ -31,6 +32,7 @@ const {
 
         <!-- Open Graph -->
         <meta property="og:type" content="website" />
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
@@ -70,9 +72,12 @@ const {
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to content</a>
+        <!-- Header and footer sit outside <main> so they keep their landmark roles. -->
+        <slot name="header" />
         <main id="main-content">
             <slot />
         </main>
+        <slot name="footer" />
     </body>
 </html>
 
