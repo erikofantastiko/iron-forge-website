@@ -3,6 +3,13 @@
 A light history of non-trivial changes to this site. After each one, add a short
 dated entry: what changed and why, in a sentence or two. Newest at the top.
 
+## 2026-11-19 — Contact addresses moved to the ironforge.app domain
+
+Replaced the old Gmail contact address on the public pages. The legal notice now shows
+`support@ironforge.app` and the privacy policy uses `privacy@ironforge.app` for every
+privacy, access and deletion contact. Nothing else changed. The waitlist form posts to
+Kit, so its sender and reply address are set in the Kit account, not in this repo.
+
 ## 2026-11-09 — Hero: no eyebrow, headline uses the full width
 
 Removed the "Workout tracking · iOS" eyebrow above the headline: it did nothing, and
